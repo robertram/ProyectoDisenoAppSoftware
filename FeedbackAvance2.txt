@@ -1,0 +1,7 @@
+Eliminen de las clases el código que no utilizan para que quede más limpio, eliminen también los eventos vacíos.
+
+Mejoren la parte visual, pueden hacer los controles un poquito más largos y simétricos.
+
+La conexion con la BD la pueden poner en una clase separada, para que el string de conexión esté en un solo lugar.
+
+Terminaron la presentación muy rápido, pudieron aprovechar el tiempo para dar más detalle de la división de código y SOLID
