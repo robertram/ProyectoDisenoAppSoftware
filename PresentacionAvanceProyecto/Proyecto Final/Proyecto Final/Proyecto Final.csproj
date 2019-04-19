@@ -52,10 +52,8 @@
     <Compile Include="Personas\Encargado_Nino.cs" />
     <Compile Include="Interfaces\IVoluntario.cs" />
     <Compile Include="PersonasDependientes\Nino.cs" />
-    <Compile Include="Personas\Fecha.cs" />
     <Compile Include="Personas\Padrino.cs" />
     <Compile Include="Personas\Patrocinador.cs" />
-    <Compile Include="Personas\PersonaPrueba.cs" />
     <Compile Include="Personas\Voluntario.cs" />
     <Compile Include="Ventanas\AlimentandoEsperanzas.cs">
       <SubType>Form</SubType>

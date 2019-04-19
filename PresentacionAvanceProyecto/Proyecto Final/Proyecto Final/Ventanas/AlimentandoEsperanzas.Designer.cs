@@ -92,30 +92,28 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dtp_FechaInscripcionNino = new System.Windows.Forms.DateTimePicker();
             this.tab_Patrocinadores = new System.Windows.Forms.TabPage();
-            this.txt_IdentificacionRepresentante = new System.Windows.Forms.TextBox();
+            this.txt_IdentificacionRepresentantePatrocinador = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.btn_AgregarPatrocinador = new System.Windows.Forms.Button();
             this.cmb_TipoPatrocinio = new System.Windows.Forms.ComboBox();
-            this.txt_TipoEmpresa = new System.Windows.Forms.TextBox();
-            this.txt_NombreEmpresa = new System.Windows.Forms.TextBox();
+            this.txt_TipoEmpresaPatrocinadora = new System.Windows.Forms.TextBox();
+            this.txt_NombreEmpresaPatrocinadora = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_EmpresaPatroc = new System.Windows.Forms.Label();
-            this.txt_CorreoRepresentante = new System.Windows.Forms.TextBox();
+            this.txt_CorreoRepresentantePatrocinador = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_PApellido = new System.Windows.Forms.TextBox();
-            this.txt_SApellido = new System.Windows.Forms.TextBox();
-            this.txt_TelefonoRepresentante = new System.Windows.Forms.TextBox();
-            this.txt_NombreRepresentante = new System.Windows.Forms.TextBox();
+            this.txt_PrimerApellidoPatrocinador = new System.Windows.Forms.TextBox();
+            this.txt_SegundoApellidoPatrocinador = new System.Windows.Forms.TextBox();
+            this.txt_TelefonoRepresentantePatrocinador = new System.Windows.Forms.TextBox();
+            this.txt_NombreRepresentantePatrocinador = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_representante = new System.Windows.Forms.Label();
             this.tab_Voluntarios = new System.Windows.Forms.TabPage();
-            this.txtNombrePersonaPrueba = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
             this.txt_IdentificaciónVoluntario = new System.Windows.Forms.TextBox();
             this.Identificación = new System.Windows.Forms.Label();
             this.txt_VoluntarioDonacionOtros = new System.Windows.Forms.TextBox();
@@ -142,7 +140,6 @@
             this.txt_NombreVoluntario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_AgregarVoluntario = new System.Windows.Forms.Button();
-            this.dtp_SoloFecha = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tab_Inicio.SuspendLayout();
             this.tab_Padrino.SuspendLayout();
@@ -746,22 +743,22 @@
             // 
             // tab_Patrocinadores
             // 
-            this.tab_Patrocinadores.Controls.Add(this.txt_IdentificacionRepresentante);
+            this.tab_Patrocinadores.Controls.Add(this.txt_IdentificacionRepresentantePatrocinador);
             this.tab_Patrocinadores.Controls.Add(this.label39);
             this.tab_Patrocinadores.Controls.Add(this.btn_AgregarPatrocinador);
             this.tab_Patrocinadores.Controls.Add(this.cmb_TipoPatrocinio);
-            this.tab_Patrocinadores.Controls.Add(this.txt_TipoEmpresa);
-            this.tab_Patrocinadores.Controls.Add(this.txt_NombreEmpresa);
+            this.tab_Patrocinadores.Controls.Add(this.txt_TipoEmpresaPatrocinadora);
+            this.tab_Patrocinadores.Controls.Add(this.txt_NombreEmpresaPatrocinadora);
             this.tab_Patrocinadores.Controls.Add(this.label9);
             this.tab_Patrocinadores.Controls.Add(this.label10);
             this.tab_Patrocinadores.Controls.Add(this.label11);
             this.tab_Patrocinadores.Controls.Add(this.lbl_EmpresaPatroc);
-            this.tab_Patrocinadores.Controls.Add(this.txt_CorreoRepresentante);
+            this.tab_Patrocinadores.Controls.Add(this.txt_CorreoRepresentantePatrocinador);
             this.tab_Patrocinadores.Controls.Add(this.label3);
-            this.tab_Patrocinadores.Controls.Add(this.txt_PApellido);
-            this.tab_Patrocinadores.Controls.Add(this.txt_SApellido);
-            this.tab_Patrocinadores.Controls.Add(this.txt_TelefonoRepresentante);
-            this.tab_Patrocinadores.Controls.Add(this.txt_NombreRepresentante);
+            this.tab_Patrocinadores.Controls.Add(this.txt_PrimerApellidoPatrocinador);
+            this.tab_Patrocinadores.Controls.Add(this.txt_SegundoApellidoPatrocinador);
+            this.tab_Patrocinadores.Controls.Add(this.txt_TelefonoRepresentantePatrocinador);
+            this.tab_Patrocinadores.Controls.Add(this.txt_NombreRepresentantePatrocinador);
             this.tab_Patrocinadores.Controls.Add(this.label4);
             this.tab_Patrocinadores.Controls.Add(this.label5);
             this.tab_Patrocinadores.Controls.Add(this.label6);
@@ -775,12 +772,12 @@
             this.tab_Patrocinadores.Text = "Patrocinadores";
             this.tab_Patrocinadores.UseVisualStyleBackColor = true;
             // 
-            // txt_IdentificacionRepresentante
+            // txt_IdentificacionRepresentantePatrocinador
             // 
-            this.txt_IdentificacionRepresentante.Location = new System.Drawing.Point(189, 210);
-            this.txt_IdentificacionRepresentante.Name = "txt_IdentificacionRepresentante";
-            this.txt_IdentificacionRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txt_IdentificacionRepresentante.TabIndex = 70;
+            this.txt_IdentificacionRepresentantePatrocinador.Location = new System.Drawing.Point(189, 210);
+            this.txt_IdentificacionRepresentantePatrocinador.Name = "txt_IdentificacionRepresentantePatrocinador";
+            this.txt_IdentificacionRepresentantePatrocinador.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdentificacionRepresentantePatrocinador.TabIndex = 70;
             // 
             // label39
             // 
@@ -814,23 +811,23 @@
             "Patrocinadores de la firma"});
             this.cmb_TipoPatrocinio.Location = new System.Drawing.Point(178, 118);
             this.cmb_TipoPatrocinio.Name = "cmb_TipoPatrocinio";
-            this.cmb_TipoPatrocinio.Size = new System.Drawing.Size(121, 21);
+            this.cmb_TipoPatrocinio.Size = new System.Drawing.Size(145, 21);
             this.cmb_TipoPatrocinio.TabIndex = 67;
             // 
-            // txt_TipoEmpresa
+            // txt_TipoEmpresaPatrocinadora
             // 
-            this.txt_TipoEmpresa.Location = new System.Drawing.Point(178, 93);
-            this.txt_TipoEmpresa.Name = "txt_TipoEmpresa";
-            this.txt_TipoEmpresa.Size = new System.Drawing.Size(100, 20);
-            this.txt_TipoEmpresa.TabIndex = 66;
+            this.txt_TipoEmpresaPatrocinadora.Location = new System.Drawing.Point(178, 93);
+            this.txt_TipoEmpresaPatrocinadora.Name = "txt_TipoEmpresaPatrocinadora";
+            this.txt_TipoEmpresaPatrocinadora.Size = new System.Drawing.Size(100, 20);
+            this.txt_TipoEmpresaPatrocinadora.TabIndex = 66;
             // 
-            // txt_NombreEmpresa
+            // txt_NombreEmpresaPatrocinadora
             // 
-            this.txt_NombreEmpresa.Location = new System.Drawing.Point(178, 67);
-            this.txt_NombreEmpresa.Name = "txt_NombreEmpresa";
-            this.txt_NombreEmpresa.Size = new System.Drawing.Size(100, 20);
-            this.txt_NombreEmpresa.TabIndex = 64;
-            this.txt_NombreEmpresa.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.txt_NombreEmpresaPatrocinadora.Location = new System.Drawing.Point(178, 67);
+            this.txt_NombreEmpresaPatrocinadora.Name = "txt_NombreEmpresaPatrocinadora";
+            this.txt_NombreEmpresaPatrocinadora.Size = new System.Drawing.Size(100, 20);
+            this.txt_NombreEmpresaPatrocinadora.TabIndex = 64;
+            this.txt_NombreEmpresaPatrocinadora.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label9
             // 
@@ -868,12 +865,12 @@
             this.lbl_EmpresaPatroc.TabIndex = 60;
             this.lbl_EmpresaPatroc.Text = "Empresa Patrocinadora";
             // 
-            // txt_CorreoRepresentante
+            // txt_CorreoRepresentantePatrocinador
             // 
-            this.txt_CorreoRepresentante.Location = new System.Drawing.Point(189, 346);
-            this.txt_CorreoRepresentante.Name = "txt_CorreoRepresentante";
-            this.txt_CorreoRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txt_CorreoRepresentante.TabIndex = 59;
+            this.txt_CorreoRepresentantePatrocinador.Location = new System.Drawing.Point(189, 346);
+            this.txt_CorreoRepresentantePatrocinador.Name = "txt_CorreoRepresentantePatrocinador";
+            this.txt_CorreoRepresentantePatrocinador.Size = new System.Drawing.Size(100, 20);
+            this.txt_CorreoRepresentantePatrocinador.TabIndex = 59;
             // 
             // label3
             // 
@@ -884,33 +881,33 @@
             this.label3.TabIndex = 58;
             this.label3.Text = "Correo";
             // 
-            // txt_PApellido
+            // txt_PrimerApellidoPatrocinador
             // 
-            this.txt_PApellido.Location = new System.Drawing.Point(189, 266);
-            this.txt_PApellido.Name = "txt_PApellido";
-            this.txt_PApellido.Size = new System.Drawing.Size(100, 20);
-            this.txt_PApellido.TabIndex = 57;
+            this.txt_PrimerApellidoPatrocinador.Location = new System.Drawing.Point(189, 266);
+            this.txt_PrimerApellidoPatrocinador.Name = "txt_PrimerApellidoPatrocinador";
+            this.txt_PrimerApellidoPatrocinador.Size = new System.Drawing.Size(100, 20);
+            this.txt_PrimerApellidoPatrocinador.TabIndex = 57;
             // 
-            // txt_SApellido
+            // txt_SegundoApellidoPatrocinador
             // 
-            this.txt_SApellido.Location = new System.Drawing.Point(189, 292);
-            this.txt_SApellido.Name = "txt_SApellido";
-            this.txt_SApellido.Size = new System.Drawing.Size(100, 20);
-            this.txt_SApellido.TabIndex = 56;
+            this.txt_SegundoApellidoPatrocinador.Location = new System.Drawing.Point(189, 292);
+            this.txt_SegundoApellidoPatrocinador.Name = "txt_SegundoApellidoPatrocinador";
+            this.txt_SegundoApellidoPatrocinador.Size = new System.Drawing.Size(100, 20);
+            this.txt_SegundoApellidoPatrocinador.TabIndex = 56;
             // 
-            // txt_TelefonoRepresentante
+            // txt_TelefonoRepresentantePatrocinador
             // 
-            this.txt_TelefonoRepresentante.Location = new System.Drawing.Point(189, 318);
-            this.txt_TelefonoRepresentante.Name = "txt_TelefonoRepresentante";
-            this.txt_TelefonoRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txt_TelefonoRepresentante.TabIndex = 55;
+            this.txt_TelefonoRepresentantePatrocinador.Location = new System.Drawing.Point(189, 318);
+            this.txt_TelefonoRepresentantePatrocinador.Name = "txt_TelefonoRepresentantePatrocinador";
+            this.txt_TelefonoRepresentantePatrocinador.Size = new System.Drawing.Size(100, 20);
+            this.txt_TelefonoRepresentantePatrocinador.TabIndex = 55;
             // 
-            // txt_NombreRepresentante
+            // txt_NombreRepresentantePatrocinador
             // 
-            this.txt_NombreRepresentante.Location = new System.Drawing.Point(189, 240);
-            this.txt_NombreRepresentante.Name = "txt_NombreRepresentante";
-            this.txt_NombreRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txt_NombreRepresentante.TabIndex = 54;
+            this.txt_NombreRepresentantePatrocinador.Location = new System.Drawing.Point(189, 240);
+            this.txt_NombreRepresentantePatrocinador.Name = "txt_NombreRepresentantePatrocinador";
+            this.txt_NombreRepresentantePatrocinador.Size = new System.Drawing.Size(100, 20);
+            this.txt_NombreRepresentantePatrocinador.TabIndex = 54;
             // 
             // label4
             // 
@@ -959,9 +956,6 @@
             // 
             // tab_Voluntarios
             // 
-            this.tab_Voluntarios.Controls.Add(this.dtp_SoloFecha);
-            this.tab_Voluntarios.Controls.Add(this.txtNombrePersonaPrueba);
-            this.tab_Voluntarios.Controls.Add(this.label40);
             this.tab_Voluntarios.Controls.Add(this.txt_IdentificaciónVoluntario);
             this.tab_Voluntarios.Controls.Add(this.Identificación);
             this.tab_Voluntarios.Controls.Add(this.txt_VoluntarioDonacionOtros);
@@ -995,23 +989,6 @@
             this.tab_Voluntarios.TabIndex = 4;
             this.tab_Voluntarios.Text = "Voluntarios";
             this.tab_Voluntarios.UseVisualStyleBackColor = true;
-            // 
-            // txtNombrePersonaPrueba
-            // 
-            this.txtNombrePersonaPrueba.Location = new System.Drawing.Point(489, 67);
-            this.txtNombrePersonaPrueba.Name = "txtNombrePersonaPrueba";
-            this.txtNombrePersonaPrueba.Size = new System.Drawing.Size(100, 20);
-            this.txtNombrePersonaPrueba.TabIndex = 66;
-            this.txtNombrePersonaPrueba.Text = "da";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(486, 47);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(80, 13);
-            this.label40.TabIndex = 65;
-            this.label40.Text = "PersonaPrueba";
             // 
             // txt_IdentificaciónVoluntario
             // 
@@ -1240,13 +1217,6 @@
             this.btn_AgregarVoluntario.UseVisualStyleBackColor = true;
             this.btn_AgregarVoluntario.Click += new System.EventHandler(this.btn_AgregarVoluntario_Click);
             // 
-            // dtp_SoloFecha
-            // 
-            this.dtp_SoloFecha.Location = new System.Drawing.Point(448, 137);
-            this.dtp_SoloFecha.Name = "dtp_SoloFecha";
-            this.dtp_SoloFecha.Size = new System.Drawing.Size(200, 20);
-            this.dtp_SoloFecha.TabIndex = 67;
-            // 
             // AlimentandoEsperanzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1298,20 +1268,20 @@
         private System.Windows.Forms.ComboBox cmb_InscripcionPadrino;
         private System.Windows.Forms.TabPage tab_Patrocinadores;
         private System.Windows.Forms.TabPage tab_Voluntarios;
-        private System.Windows.Forms.TextBox txt_PApellido;
-        private System.Windows.Forms.TextBox txt_SApellido;
-        private System.Windows.Forms.TextBox txt_TelefonoRepresentante;
-        private System.Windows.Forms.TextBox txt_NombreRepresentante;
+        private System.Windows.Forms.TextBox txt_PrimerApellidoPatrocinador;
+        private System.Windows.Forms.TextBox txt_SegundoApellidoPatrocinador;
+        private System.Windows.Forms.TextBox txt_TelefonoRepresentantePatrocinador;
+        private System.Windows.Forms.TextBox txt_NombreRepresentantePatrocinador;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_representante;
         private System.Windows.Forms.Label lbl_EmpresaPatroc;
-        private System.Windows.Forms.TextBox txt_CorreoRepresentante;
+        private System.Windows.Forms.TextBox txt_CorreoRepresentantePatrocinador;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_TipoEmpresa;
-        private System.Windows.Forms.TextBox txt_NombreEmpresa;
+        private System.Windows.Forms.TextBox txt_TipoEmpresaPatrocinadora;
+        private System.Windows.Forms.TextBox txt_NombreEmpresaPatrocinadora;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -1380,11 +1350,8 @@
         private System.Windows.Forms.Label Identificación;
         private System.Windows.Forms.TextBox txt_IdentificacionEncargadoNino;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox txt_IdentificacionRepresentante;
+        private System.Windows.Forms.TextBox txt_IdentificacionRepresentantePatrocinador;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox txtNombrePersonaPrueba;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.DateTimePicker dtp_SoloFecha;
     }
 }
 

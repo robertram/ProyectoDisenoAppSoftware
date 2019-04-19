@@ -36,10 +36,10 @@ namespace Proyecto_Final
         /// <param name="correo"></param>
         /// <param name="inscripcion"></param>
         /// <param name="donacion"></param>
-        public Voluntario(string identificacion, /*, string fecha, */string nombreCompleto, string primerApellido, string segundoApellido, string telefono, string profesion, string domicilio, string correo, /*string identificacion,*/ string inscripcion, string donacion)
+        public Voluntario(string identificacion, string fecha, string nombreCompleto, string primerApellido, string segundoApellido, string telefono, string profesion, string domicilio, string correo, /*string identificacion,*/ string inscripcion, string donacion)
         {
             this.Set_identificacion(identificacion);
-            //this.Set_fecha(fecha);
+            this.Set_fecha(fecha);
             this.Set_nombre(nombreCompleto);
             this.Set_primerApellido(primerApellido);
             this.Set_segundoApellido(segundoApellido);
@@ -98,9 +98,9 @@ namespace Proyecto_Final
                     {
                         command.Connection = connection;            // <== lacking
                         command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into Tbl_Voluntario (identificacion, nombre, apellido1, apellido2, telefono, profesion, domicilio, inscripcion, donacion, correo) VALUES (@identificacion,  @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @inscripcion, @donacion, @correo)";
-                        command.Parameters.AddWithValue("@identificacion", voluntario.Get_identificacion()); 
-                        //command.Parameters.AddWithValue("@fecha", voluntario.Get_fecha());
+                        command.CommandText = "INSERT into Tbl_Voluntario (identificacion, fecha, nombre, apellido1, apellido2, telefono, profesion, domicilio, inscripcion, donacion, correo) VALUES (@identificacion, @fecha, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @inscripcion, @donacion, @correo)";
+                        command.Parameters.AddWithValue("@identificacion", voluntario.Get_identificacion());
+                        command.Parameters.AddWithValue("@fecha", voluntario.Get_fecha());
                         command.Parameters.AddWithValue("@nombre", voluntario.Get_nombre());
                         command.Parameters.AddWithValue("@apellido1", voluntario.Get_primerApellido());
                         command.Parameters.AddWithValue("@apellido2", voluntario.Get_segundoApellido());
@@ -130,7 +130,7 @@ namespace Proyecto_Final
             }
             else
             {
-                MessageBox.Show("No se logró guardar los datos en la base de datos Voluntario");
+                MessageBox.Show("Faltan datos Voluntario");
                 return false;
             }
             return true;
@@ -146,7 +146,8 @@ namespace Proyecto_Final
         /// </returns>
         public bool ValidarConObjeto(Voluntario voluntario)
         {
-            if (string.IsNullOrWhiteSpace(voluntario.Get_nombre())
+            if (string.IsNullOrWhiteSpace(voluntario.Get_identificacion())
+                || string.IsNullOrWhiteSpace(voluntario.Get_nombre())
                 || string.IsNullOrWhiteSpace(voluntario.Get_fecha())
                 || string.IsNullOrWhiteSpace(voluntario.Get_primerApellido())
                 || string.IsNullOrWhiteSpace(voluntario.Get_segundoApellido())
