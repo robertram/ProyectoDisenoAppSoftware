@@ -21,5 +21,8 @@ namespace Proyecto_Final
         {
             return _nino;
         }
+
+
+
     }
 }

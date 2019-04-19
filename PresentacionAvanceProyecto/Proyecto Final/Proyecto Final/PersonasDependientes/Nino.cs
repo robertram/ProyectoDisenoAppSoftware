@@ -26,7 +26,7 @@ namespace Proyecto_Final
        
         public bool Validacion_DatosNino(Nino nino)
         {
-            if (string.IsNullOrWhiteSpace(nino.Get_nombreCompleto())
+            if (string.IsNullOrWhiteSpace(nino.Get_nombre())
                 || string.IsNullOrWhiteSpace(nino.Get_primerApellido())
                 || string.IsNullOrWhiteSpace(nino.Get_segundoApellido())
                 || string.IsNullOrWhiteSpace(nino.Get_telefono())

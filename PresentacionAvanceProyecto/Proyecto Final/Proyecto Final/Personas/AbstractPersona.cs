@@ -17,7 +17,7 @@ namespace Proyecto_Final
         /// Los atributos son prvados y se accesan por medio de sus setters y getters
         /// </summary>
         private string _identificacion;
-        private string _nombreCompleto;
+        private string _nombre;
         private string _primerApellido;
         private string _segundoApellido;
         private string _telefono;
@@ -34,13 +34,13 @@ namespace Proyecto_Final
             return _identificacion;
         }
         
-        public virtual void Set_nombreCompleto (string nombreCompleto)
+        public virtual void Set_nombre (string nombre)
         {
-            this._nombreCompleto = nombreCompleto;
+            this._nombre = nombre;
         }
-        public virtual string Get_nombreCompleto()
+        public virtual string Get_nombre()
         {
-            return _nombreCompleto;
+            return _nombre;
         }
 
         public virtual void Set_primerApellido (string primerApellido)

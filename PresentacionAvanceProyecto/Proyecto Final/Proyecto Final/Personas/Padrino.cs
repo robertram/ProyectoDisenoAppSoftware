@@ -21,17 +21,19 @@ namespace Proyecto_Final
         private string _donacion;
 
         
-        public Padrino(string nombreCompleto, string primerApellido, string segundoApellido, string telefono, string profesion, string domicilio, string correo, string inscripcion, string donacion)
+        public Padrino(string identificacion, string fecha, string nombre, string primerApellido, string segundoApellido, string telefono, string profesion, string domicilio, string correo, string inscripcion, string donacion)
         {
-            this.Set_nombreCompleto(nombreCompleto);
-            this.Set_primerApellido(primerApellido);
-            this.Set_segundoApellido(segundoApellido);
-            this.Set_telefono(telefono);
-            this.Set_profesion(profesion);
-            this.Set_domicilio(domicilio);
-            this.Set_correo(correo);
-            this.Set_inscripcion(inscripcion);
-            this.Set_donacion(donacion);
+            this.Set_identificacion(identificacion);//
+            this.Set_fecha(fecha);//
+            this.Set_nombre(nombre);//
+            this.Set_primerApellido(primerApellido);//
+            this.Set_segundoApellido(segundoApellido);//
+            this.Set_telefono(telefono);//
+            this.Set_profesion(profesion);//
+            this.Set_domicilio(domicilio);//
+            this.Set_correo(correo);//
+            this.Set_inscripcion(inscripcion);//
+            this.Set_donacion(donacion);//
         }
 
         
@@ -62,9 +64,11 @@ namespace Proyecto_Final
             return _donacion;
         }
 
-        public bool ValidarConObjeto(Padrino padrino)
+        public bool ValidarConObjeto(Padrino padrino)//Correo Allow Nulls
         {
-            if (string.IsNullOrWhiteSpace(padrino.Get_nombreCompleto())
+            if (string.IsNullOrWhiteSpace(padrino.Get_identificacion())
+                || string.IsNullOrWhiteSpace(padrino.Get_fecha())
+                || string.IsNullOrWhiteSpace(padrino.Get_nombre())
                 || string.IsNullOrWhiteSpace(padrino.Get_primerApellido())
                 || string.IsNullOrWhiteSpace(padrino.Get_segundoApellido())
                 || string.IsNullOrWhiteSpace(padrino.Get_telefono())
@@ -92,17 +96,18 @@ namespace Proyecto_Final
                     {
                         command.Connection = connection;            // <== lacking
                         command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into Tbl_Voluntario (nombre, apellido1, apellido2, telefono, profesion, domicilio, correo,  inscripcion, donacion) VALUES (@nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @correo, @inscripcion, @donacion)";
-                        command.Parameters.AddWithValue("@nombre", padrino.Get_nombreCompleto());
+                        command.CommandText = "INSERT into tbl_Padrinos (identificacion, fecha, nombre, apellido1, apellido2, telefono, profesion, domicilio, correo, inscripcion, donacion) VALUES (@identificacion, @fecha, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @correo, @inscripcion, @donacion)";
+                        command.Parameters.AddWithValue("@identificacion", padrino.Get_identificacion());
+                        command.Parameters.AddWithValue("@fecha", _fecha);
+                        command.Parameters.AddWithValue("@nombre", padrino.Get_nombre());
                         command.Parameters.AddWithValue("@apellido1", padrino.Get_primerApellido());
                         command.Parameters.AddWithValue("@apellido2", padrino.Get_segundoApellido());
                         command.Parameters.AddWithValue("@telefono", padrino.Get_telefono());
                         command.Parameters.AddWithValue("@profesion", padrino.Get_profesion());
                         command.Parameters.AddWithValue("@domicilio", padrino.Get_domicilio());
                         command.Parameters.AddWithValue("@correo", padrino.Get_correo());
-                        //command.Parameters.AddWithValue("@inscripcion", inscripcion);
+                        command.Parameters.AddWithValue("@inscripcion", _inscripcion);
                         command.Parameters.AddWithValue("@donacion", _donacion);
-                        command.Parameters.AddWithValue("@fecha", _fecha);
 
                         try
                         {
@@ -111,7 +116,7 @@ namespace Proyecto_Final
                         }
                         catch (SqlException)
                         {
-                            // error here
+                            MessageBox.Show("Entró! Pero no se logró guardar los datos en la base de datos");
                         }
                         finally
                         {

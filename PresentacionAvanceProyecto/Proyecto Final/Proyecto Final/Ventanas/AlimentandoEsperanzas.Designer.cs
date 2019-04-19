@@ -34,13 +34,15 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tab_Padrino = new System.Windows.Forms.TabPage();
-            this.txt_PrimerApellido = new System.Windows.Forms.TextBox();
-            this.txt_SegundoApellido = new System.Windows.Forms.TextBox();
-            this.txt_Telefono = new System.Windows.Forms.TextBox();
-            this.txt_Profesion = new System.Windows.Forms.TextBox();
-            this.txt_Domicilio = new System.Windows.Forms.TextBox();
-            this.txt_Correo = new System.Windows.Forms.TextBox();
-            this.txt_NombreCompleto = new System.Windows.Forms.TextBox();
+            this.txt_IdentificacionPadrino = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txt_PrimerApellidoPadrino = new System.Windows.Forms.TextBox();
+            this.txt_SegundoApellidoPadrino = new System.Windows.Forms.TextBox();
+            this.txt_TelefonoPadrino = new System.Windows.Forms.TextBox();
+            this.txt_ProfesionPadrino = new System.Windows.Forms.TextBox();
+            this.txt_DomicilioPadrino = new System.Windows.Forms.TextBox();
+            this.txt_CorreoPadrino = new System.Windows.Forms.TextBox();
+            this.txt_NombrePadrino = new System.Windows.Forms.TextBox();
             this.lbl_Domicilio = new System.Windows.Forms.Label();
             this.lbl_Correo = new System.Windows.Forms.Label();
             this.lbl_Nombre = new System.Windows.Forms.Label();
@@ -50,12 +52,14 @@
             this.lbl_Profesion = new System.Windows.Forms.Label();
             this.btn_AgregarPadrino = new System.Windows.Forms.Button();
             this.lbl_Fecha = new System.Windows.Forms.Label();
-            this.dtp_FechaInscripcion = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaInscripcionPadrino = new System.Windows.Forms.DateTimePicker();
             this.lbl_TipoDonacion = new System.Windows.Forms.Label();
             this.lbl_Inscripcion = new System.Windows.Forms.Label();
-            this.cmb_Donacion = new System.Windows.Forms.ComboBox();
-            this.cmb_Inscripcion = new System.Windows.Forms.ComboBox();
+            this.cmb_DonacionPadrino = new System.Windows.Forms.ComboBox();
+            this.cmb_InscripcionPadrino = new System.Windows.Forms.ComboBox();
             this.tab_ninos = new System.Windows.Forms.TabPage();
+            this.txt_IdentificacionEncargadoNino = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.btn_AgregarNino = new System.Windows.Forms.Button();
             this.lbl_encargado = new System.Windows.Forms.Label();
             this.lbl_nino = new System.Windows.Forms.Label();
@@ -88,6 +92,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dtp_FechaInscripcionNino = new System.Windows.Forms.DateTimePicker();
             this.tab_Patrocinadores = new System.Windows.Forms.TabPage();
+            this.txt_IdentificacionRepresentante = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.btn_AgregarPatrocinador = new System.Windows.Forms.Button();
             this.cmb_TipoPatrocinio = new System.Windows.Forms.ComboBox();
             this.txt_TipoEmpresa = new System.Windows.Forms.TextBox();
@@ -108,7 +114,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_representante = new System.Windows.Forms.Label();
             this.tab_Voluntarios = new System.Windows.Forms.TabPage();
-            this.Donacion = new System.Windows.Forms.TextBox();
+            this.txtNombrePersonaPrueba = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txt_IdentificaciónVoluntario = new System.Windows.Forms.TextBox();
+            this.Identificación = new System.Windows.Forms.Label();
+            this.txt_VoluntarioDonacionOtros = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.dtp_FechaInscripcionVoluntario = new System.Windows.Forms.DateTimePicker();
@@ -132,14 +142,7 @@
             this.txt_NombreVoluntario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_AgregarVoluntario = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.txt_IdentificacionPadrino = new System.Windows.Forms.TextBox();
-            this.Identificación = new System.Windows.Forms.Label();
-            this.txt_IdentificaciónVoluntario = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.txt_IdentificacionEncargadoNino = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.txt_IdentificacionRepresentante = new System.Windows.Forms.TextBox();
+            this.dtp_SoloFecha = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tab_Inicio.SuspendLayout();
             this.tab_Padrino.SuspendLayout();
@@ -197,13 +200,13 @@
             // 
             this.tab_Padrino.Controls.Add(this.txt_IdentificacionPadrino);
             this.tab_Padrino.Controls.Add(this.label37);
-            this.tab_Padrino.Controls.Add(this.txt_PrimerApellido);
-            this.tab_Padrino.Controls.Add(this.txt_SegundoApellido);
-            this.tab_Padrino.Controls.Add(this.txt_Telefono);
-            this.tab_Padrino.Controls.Add(this.txt_Profesion);
-            this.tab_Padrino.Controls.Add(this.txt_Domicilio);
-            this.tab_Padrino.Controls.Add(this.txt_Correo);
-            this.tab_Padrino.Controls.Add(this.txt_NombreCompleto);
+            this.tab_Padrino.Controls.Add(this.txt_PrimerApellidoPadrino);
+            this.tab_Padrino.Controls.Add(this.txt_SegundoApellidoPadrino);
+            this.tab_Padrino.Controls.Add(this.txt_TelefonoPadrino);
+            this.tab_Padrino.Controls.Add(this.txt_ProfesionPadrino);
+            this.tab_Padrino.Controls.Add(this.txt_DomicilioPadrino);
+            this.tab_Padrino.Controls.Add(this.txt_CorreoPadrino);
+            this.tab_Padrino.Controls.Add(this.txt_NombrePadrino);
             this.tab_Padrino.Controls.Add(this.lbl_Domicilio);
             this.tab_Padrino.Controls.Add(this.lbl_Correo);
             this.tab_Padrino.Controls.Add(this.lbl_Nombre);
@@ -213,11 +216,11 @@
             this.tab_Padrino.Controls.Add(this.lbl_Profesion);
             this.tab_Padrino.Controls.Add(this.btn_AgregarPadrino);
             this.tab_Padrino.Controls.Add(this.lbl_Fecha);
-            this.tab_Padrino.Controls.Add(this.dtp_FechaInscripcion);
+            this.tab_Padrino.Controls.Add(this.dtp_FechaInscripcionPadrino);
             this.tab_Padrino.Controls.Add(this.lbl_TipoDonacion);
             this.tab_Padrino.Controls.Add(this.lbl_Inscripcion);
-            this.tab_Padrino.Controls.Add(this.cmb_Donacion);
-            this.tab_Padrino.Controls.Add(this.cmb_Inscripcion);
+            this.tab_Padrino.Controls.Add(this.cmb_DonacionPadrino);
+            this.tab_Padrino.Controls.Add(this.cmb_InscripcionPadrino);
             this.tab_Padrino.Location = new System.Drawing.Point(4, 22);
             this.tab_Padrino.Name = "tab_Padrino";
             this.tab_Padrino.Padding = new System.Windows.Forms.Padding(3);
@@ -226,55 +229,71 @@
             this.tab_Padrino.Text = "Padrinos";
             this.tab_Padrino.UseVisualStyleBackColor = true;
             // 
-            // txt_PrimerApellido
+            // txt_IdentificacionPadrino
             // 
-            this.txt_PrimerApellido.Location = new System.Drawing.Point(199, 151);
-            this.txt_PrimerApellido.Name = "txt_PrimerApellido";
-            this.txt_PrimerApellido.Size = new System.Drawing.Size(100, 20);
-            this.txt_PrimerApellido.TabIndex = 49;
+            this.txt_IdentificacionPadrino.Location = new System.Drawing.Point(199, 91);
+            this.txt_IdentificacionPadrino.Name = "txt_IdentificacionPadrino";
+            this.txt_IdentificacionPadrino.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdentificacionPadrino.TabIndex = 51;
             // 
-            // txt_SegundoApellido
+            // label37
             // 
-            this.txt_SegundoApellido.Location = new System.Drawing.Point(199, 177);
-            this.txt_SegundoApellido.Name = "txt_SegundoApellido";
-            this.txt_SegundoApellido.Size = new System.Drawing.Size(100, 20);
-            this.txt_SegundoApellido.TabIndex = 48;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(62, 99);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(70, 13);
+            this.label37.TabIndex = 50;
+            this.label37.Text = "Identificación";
             // 
-            // txt_Telefono
+            // txt_PrimerApellidoPadrino
             // 
-            this.txt_Telefono.Location = new System.Drawing.Point(199, 203);
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(100, 20);
-            this.txt_Telefono.TabIndex = 47;
+            this.txt_PrimerApellidoPadrino.Location = new System.Drawing.Point(199, 151);
+            this.txt_PrimerApellidoPadrino.Name = "txt_PrimerApellidoPadrino";
+            this.txt_PrimerApellidoPadrino.Size = new System.Drawing.Size(100, 20);
+            this.txt_PrimerApellidoPadrino.TabIndex = 49;
             // 
-            // txt_Profesion
+            // txt_SegundoApellidoPadrino
             // 
-            this.txt_Profesion.Location = new System.Drawing.Point(199, 229);
-            this.txt_Profesion.Name = "txt_Profesion";
-            this.txt_Profesion.Size = new System.Drawing.Size(100, 20);
-            this.txt_Profesion.TabIndex = 46;
+            this.txt_SegundoApellidoPadrino.Location = new System.Drawing.Point(199, 177);
+            this.txt_SegundoApellidoPadrino.Name = "txt_SegundoApellidoPadrino";
+            this.txt_SegundoApellidoPadrino.Size = new System.Drawing.Size(100, 20);
+            this.txt_SegundoApellidoPadrino.TabIndex = 48;
             // 
-            // txt_Domicilio
+            // txt_TelefonoPadrino
             // 
-            this.txt_Domicilio.Location = new System.Drawing.Point(199, 255);
-            this.txt_Domicilio.Multiline = true;
-            this.txt_Domicilio.Name = "txt_Domicilio";
-            this.txt_Domicilio.Size = new System.Drawing.Size(100, 77);
-            this.txt_Domicilio.TabIndex = 45;
+            this.txt_TelefonoPadrino.Location = new System.Drawing.Point(199, 203);
+            this.txt_TelefonoPadrino.Name = "txt_TelefonoPadrino";
+            this.txt_TelefonoPadrino.Size = new System.Drawing.Size(100, 20);
+            this.txt_TelefonoPadrino.TabIndex = 47;
             // 
-            // txt_Correo
+            // txt_ProfesionPadrino
             // 
-            this.txt_Correo.Location = new System.Drawing.Point(199, 338);
-            this.txt_Correo.Name = "txt_Correo";
-            this.txt_Correo.Size = new System.Drawing.Size(100, 20);
-            this.txt_Correo.TabIndex = 44;
+            this.txt_ProfesionPadrino.Location = new System.Drawing.Point(199, 229);
+            this.txt_ProfesionPadrino.Name = "txt_ProfesionPadrino";
+            this.txt_ProfesionPadrino.Size = new System.Drawing.Size(100, 20);
+            this.txt_ProfesionPadrino.TabIndex = 46;
             // 
-            // txt_NombreCompleto
+            // txt_DomicilioPadrino
             // 
-            this.txt_NombreCompleto.Location = new System.Drawing.Point(199, 125);
-            this.txt_NombreCompleto.Name = "txt_NombreCompleto";
-            this.txt_NombreCompleto.Size = new System.Drawing.Size(100, 20);
-            this.txt_NombreCompleto.TabIndex = 43;
+            this.txt_DomicilioPadrino.Location = new System.Drawing.Point(199, 255);
+            this.txt_DomicilioPadrino.Multiline = true;
+            this.txt_DomicilioPadrino.Name = "txt_DomicilioPadrino";
+            this.txt_DomicilioPadrino.Size = new System.Drawing.Size(100, 77);
+            this.txt_DomicilioPadrino.TabIndex = 45;
+            // 
+            // txt_CorreoPadrino
+            // 
+            this.txt_CorreoPadrino.Location = new System.Drawing.Point(199, 338);
+            this.txt_CorreoPadrino.Name = "txt_CorreoPadrino";
+            this.txt_CorreoPadrino.Size = new System.Drawing.Size(100, 20);
+            this.txt_CorreoPadrino.TabIndex = 44;
+            // 
+            // txt_NombrePadrino
+            // 
+            this.txt_NombrePadrino.Location = new System.Drawing.Point(199, 125);
+            this.txt_NombrePadrino.Name = "txt_NombrePadrino";
+            this.txt_NombrePadrino.Size = new System.Drawing.Size(100, 20);
+            this.txt_NombrePadrino.TabIndex = 43;
             // 
             // lbl_Domicilio
             // 
@@ -347,6 +366,7 @@
             this.btn_AgregarPadrino.TabIndex = 35;
             this.btn_AgregarPadrino.Text = "Agregar";
             this.btn_AgregarPadrino.UseVisualStyleBackColor = true;
+            this.btn_AgregarPadrino.Click += new System.EventHandler(this.btn_AgregarPadrino_Click);
             // 
             // lbl_Fecha
             // 
@@ -357,13 +377,13 @@
             this.lbl_Fecha.TabIndex = 34;
             this.lbl_Fecha.Text = "Fecha";
             // 
-            // dtp_FechaInscripcion
+            // dtp_FechaInscripcionPadrino
             // 
-            this.dtp_FechaInscripcion.Location = new System.Drawing.Point(115, 41);
-            this.dtp_FechaInscripcion.Name = "dtp_FechaInscripcion";
-            this.dtp_FechaInscripcion.Size = new System.Drawing.Size(200, 20);
-            this.dtp_FechaInscripcion.TabIndex = 33;
-            this.dtp_FechaInscripcion.Value = new System.DateTime(2019, 2, 21, 0, 0, 0, 0);
+            this.dtp_FechaInscripcionPadrino.Location = new System.Drawing.Point(115, 41);
+            this.dtp_FechaInscripcionPadrino.Name = "dtp_FechaInscripcionPadrino";
+            this.dtp_FechaInscripcionPadrino.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaInscripcionPadrino.TabIndex = 33;
+            this.dtp_FechaInscripcionPadrino.Value = new System.DateTime(2019, 2, 21, 0, 0, 0, 0);
             // 
             // lbl_TipoDonacion
             // 
@@ -383,32 +403,32 @@
             this.lbl_Inscripcion.TabIndex = 31;
             this.lbl_Inscripcion.Text = "Modalidad de Inscripcion";
             // 
-            // cmb_Donacion
+            // cmb_DonacionPadrino
             // 
-            this.cmb_Donacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Donacion.FormattingEnabled = true;
-            this.cmb_Donacion.Items.AddRange(new object[] {
+            this.cmb_DonacionPadrino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_DonacionPadrino.FormattingEnabled = true;
+            this.cmb_DonacionPadrino.Items.AddRange(new object[] {
             "Economica",
             "En especie",
             "Otros"});
-            this.cmb_Donacion.Location = new System.Drawing.Point(199, 409);
-            this.cmb_Donacion.Name = "cmb_Donacion";
-            this.cmb_Donacion.Size = new System.Drawing.Size(121, 21);
-            this.cmb_Donacion.TabIndex = 30;
+            this.cmb_DonacionPadrino.Location = new System.Drawing.Point(199, 409);
+            this.cmb_DonacionPadrino.Name = "cmb_DonacionPadrino";
+            this.cmb_DonacionPadrino.Size = new System.Drawing.Size(121, 21);
+            this.cmb_DonacionPadrino.TabIndex = 30;
             // 
-            // cmb_Inscripcion
+            // cmb_InscripcionPadrino
             // 
-            this.cmb_Inscripcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Inscripcion.FormattingEnabled = true;
-            this.cmb_Inscripcion.Items.AddRange(new object[] {
+            this.cmb_InscripcionPadrino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_InscripcionPadrino.FormattingEnabled = true;
+            this.cmb_InscripcionPadrino.Items.AddRange(new object[] {
             "Mensual",
             "Trimestral",
             "Anual",
             "Libre"});
-            this.cmb_Inscripcion.Location = new System.Drawing.Point(199, 364);
-            this.cmb_Inscripcion.Name = "cmb_Inscripcion";
-            this.cmb_Inscripcion.Size = new System.Drawing.Size(121, 21);
-            this.cmb_Inscripcion.TabIndex = 29;
+            this.cmb_InscripcionPadrino.Location = new System.Drawing.Point(199, 364);
+            this.cmb_InscripcionPadrino.Name = "cmb_InscripcionPadrino";
+            this.cmb_InscripcionPadrino.Size = new System.Drawing.Size(121, 21);
+            this.cmb_InscripcionPadrino.TabIndex = 29;
             // 
             // tab_ninos
             // 
@@ -452,6 +472,22 @@
             this.tab_ninos.TabIndex = 2;
             this.tab_ninos.Text = "Niños";
             this.tab_ninos.UseVisualStyleBackColor = true;
+            // 
+            // txt_IdentificacionEncargadoNino
+            // 
+            this.txt_IdentificacionEncargadoNino.Location = new System.Drawing.Point(514, 96);
+            this.txt_IdentificacionEncargadoNino.Name = "txt_IdentificacionEncargadoNino";
+            this.txt_IdentificacionEncargadoNino.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdentificacionEncargadoNino.TabIndex = 86;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(377, 104);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(70, 13);
+            this.label38.TabIndex = 85;
+            this.label38.Text = "Identificación";
             // 
             // btn_AgregarNino
             // 
@@ -739,6 +775,22 @@
             this.tab_Patrocinadores.Text = "Patrocinadores";
             this.tab_Patrocinadores.UseVisualStyleBackColor = true;
             // 
+            // txt_IdentificacionRepresentante
+            // 
+            this.txt_IdentificacionRepresentante.Location = new System.Drawing.Point(189, 210);
+            this.txt_IdentificacionRepresentante.Name = "txt_IdentificacionRepresentante";
+            this.txt_IdentificacionRepresentante.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdentificacionRepresentante.TabIndex = 70;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(49, 218);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(70, 13);
+            this.label39.TabIndex = 69;
+            this.label39.Text = "Identificación";
+            // 
             // btn_AgregarPatrocinador
             // 
             this.btn_AgregarPatrocinador.Location = new System.Drawing.Point(292, 400);
@@ -907,9 +959,12 @@
             // 
             // tab_Voluntarios
             // 
+            this.tab_Voluntarios.Controls.Add(this.dtp_SoloFecha);
+            this.tab_Voluntarios.Controls.Add(this.txtNombrePersonaPrueba);
+            this.tab_Voluntarios.Controls.Add(this.label40);
             this.tab_Voluntarios.Controls.Add(this.txt_IdentificaciónVoluntario);
             this.tab_Voluntarios.Controls.Add(this.Identificación);
-            this.tab_Voluntarios.Controls.Add(this.Donacion);
+            this.tab_Voluntarios.Controls.Add(this.txt_VoluntarioDonacionOtros);
             this.tab_Voluntarios.Controls.Add(this.label36);
             this.tab_Voluntarios.Controls.Add(this.label28);
             this.tab_Voluntarios.Controls.Add(this.dtp_FechaInscripcionVoluntario);
@@ -941,13 +996,46 @@
             this.tab_Voluntarios.Text = "Voluntarios";
             this.tab_Voluntarios.UseVisualStyleBackColor = true;
             // 
-            // Donacion
+            // txtNombrePersonaPrueba
             // 
-            this.Donacion.Location = new System.Drawing.Point(354, 251);
-            this.Donacion.Name = "Donacion";
-            this.Donacion.Size = new System.Drawing.Size(100, 20);
-            this.Donacion.TabIndex = 62;
-            this.Donacion.Visible = false;
+            this.txtNombrePersonaPrueba.Location = new System.Drawing.Point(489, 67);
+            this.txtNombrePersonaPrueba.Name = "txtNombrePersonaPrueba";
+            this.txtNombrePersonaPrueba.Size = new System.Drawing.Size(100, 20);
+            this.txtNombrePersonaPrueba.TabIndex = 66;
+            this.txtNombrePersonaPrueba.Text = "da";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(486, 47);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(80, 13);
+            this.label40.TabIndex = 65;
+            this.label40.Text = "PersonaPrueba";
+            // 
+            // txt_IdentificaciónVoluntario
+            // 
+            this.txt_IdentificaciónVoluntario.Location = new System.Drawing.Point(198, 101);
+            this.txt_IdentificaciónVoluntario.Name = "txt_IdentificaciónVoluntario";
+            this.txt_IdentificaciónVoluntario.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdentificaciónVoluntario.TabIndex = 64;
+            // 
+            // Identificación
+            // 
+            this.Identificación.AutoSize = true;
+            this.Identificación.Location = new System.Drawing.Point(67, 109);
+            this.Identificación.Name = "Identificación";
+            this.Identificación.Size = new System.Drawing.Size(70, 13);
+            this.Identificación.TabIndex = 63;
+            this.Identificación.Text = "Identificación";
+            // 
+            // txt_VoluntarioDonacionOtros
+            // 
+            this.txt_VoluntarioDonacionOtros.Location = new System.Drawing.Point(354, 251);
+            this.txt_VoluntarioDonacionOtros.Name = "txt_VoluntarioDonacionOtros";
+            this.txt_VoluntarioDonacionOtros.Size = new System.Drawing.Size(100, 20);
+            this.txt_VoluntarioDonacionOtros.TabIndex = 62;
+            this.txt_VoluntarioDonacionOtros.Visible = false;
             // 
             // label36
             // 
@@ -1152,69 +1240,12 @@
             this.btn_AgregarVoluntario.UseVisualStyleBackColor = true;
             this.btn_AgregarVoluntario.Click += new System.EventHandler(this.btn_AgregarVoluntario_Click);
             // 
-            // label37
+            // dtp_SoloFecha
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(62, 99);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(70, 13);
-            this.label37.TabIndex = 50;
-            this.label37.Text = "Identificación";
-            // 
-            // txt_IdentificacionPadrino
-            // 
-            this.txt_IdentificacionPadrino.Location = new System.Drawing.Point(199, 91);
-            this.txt_IdentificacionPadrino.Name = "txt_IdentificacionPadrino";
-            this.txt_IdentificacionPadrino.Size = new System.Drawing.Size(100, 20);
-            this.txt_IdentificacionPadrino.TabIndex = 51;
-            // 
-            // Identificación
-            // 
-            this.Identificación.AutoSize = true;
-            this.Identificación.Location = new System.Drawing.Point(67, 109);
-            this.Identificación.Name = "Identificación";
-            this.Identificación.Size = new System.Drawing.Size(70, 13);
-            this.Identificación.TabIndex = 63;
-            this.Identificación.Text = "Identificación";
-            // 
-            // txt_IdentificaciónVoluntario
-            // 
-            this.txt_IdentificaciónVoluntario.Location = new System.Drawing.Point(198, 101);
-            this.txt_IdentificaciónVoluntario.Name = "txt_IdentificaciónVoluntario";
-            this.txt_IdentificaciónVoluntario.Size = new System.Drawing.Size(100, 20);
-            this.txt_IdentificaciónVoluntario.TabIndex = 64;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(377, 104);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(70, 13);
-            this.label38.TabIndex = 85;
-            this.label38.Text = "Identificación";
-            // 
-            // txt_IdentificacionEncargadoNino
-            // 
-            this.txt_IdentificacionEncargadoNino.Location = new System.Drawing.Point(514, 96);
-            this.txt_IdentificacionEncargadoNino.Name = "txt_IdentificacionEncargadoNino";
-            this.txt_IdentificacionEncargadoNino.Size = new System.Drawing.Size(100, 20);
-            this.txt_IdentificacionEncargadoNino.TabIndex = 86;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(49, 218);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(70, 13);
-            this.label39.TabIndex = 69;
-            this.label39.Text = "Identificación";
-            // 
-            // txt_IdentificacionRepresentante
-            // 
-            this.txt_IdentificacionRepresentante.Location = new System.Drawing.Point(189, 210);
-            this.txt_IdentificacionRepresentante.Name = "txt_IdentificacionRepresentante";
-            this.txt_IdentificacionRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txt_IdentificacionRepresentante.TabIndex = 70;
+            this.dtp_SoloFecha.Location = new System.Drawing.Point(448, 137);
+            this.dtp_SoloFecha.Name = "dtp_SoloFecha";
+            this.dtp_SoloFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtp_SoloFecha.TabIndex = 67;
             // 
             // AlimentandoEsperanzas
             // 
@@ -1244,13 +1275,13 @@
         private System.Windows.Forms.TabPage tab_Inicio;
         private System.Windows.Forms.TabPage tab_Padrino;
         private System.Windows.Forms.TabPage tab_ninos;
-        private System.Windows.Forms.TextBox txt_PrimerApellido;
-        private System.Windows.Forms.TextBox txt_SegundoApellido;
-        private System.Windows.Forms.TextBox txt_Telefono;
-        private System.Windows.Forms.TextBox txt_Profesion;
-        private System.Windows.Forms.TextBox txt_Domicilio;
-        private System.Windows.Forms.TextBox txt_Correo;
-        private System.Windows.Forms.TextBox txt_NombreCompleto;
+        private System.Windows.Forms.TextBox txt_PrimerApellidoPadrino;
+        private System.Windows.Forms.TextBox txt_SegundoApellidoPadrino;
+        private System.Windows.Forms.TextBox txt_TelefonoPadrino;
+        private System.Windows.Forms.TextBox txt_ProfesionPadrino;
+        private System.Windows.Forms.TextBox txt_DomicilioPadrino;
+        private System.Windows.Forms.TextBox txt_CorreoPadrino;
+        private System.Windows.Forms.TextBox txt_NombrePadrino;
         private System.Windows.Forms.Label lbl_Domicilio;
         private System.Windows.Forms.Label lbl_Correo;
         private System.Windows.Forms.Label lbl_Nombre;
@@ -1260,11 +1291,11 @@
         private System.Windows.Forms.Label lbl_Profesion;
         private System.Windows.Forms.Button btn_AgregarPadrino;
         private System.Windows.Forms.Label lbl_Fecha;
-        private System.Windows.Forms.DateTimePicker dtp_FechaInscripcion;
+        private System.Windows.Forms.DateTimePicker dtp_FechaInscripcionPadrino;
         private System.Windows.Forms.Label lbl_TipoDonacion;
         private System.Windows.Forms.Label lbl_Inscripcion;
-        private System.Windows.Forms.ComboBox cmb_Donacion;
-        private System.Windows.Forms.ComboBox cmb_Inscripcion;
+        private System.Windows.Forms.ComboBox cmb_DonacionPadrino;
+        private System.Windows.Forms.ComboBox cmb_InscripcionPadrino;
         private System.Windows.Forms.TabPage tab_Patrocinadores;
         private System.Windows.Forms.TabPage tab_Voluntarios;
         private System.Windows.Forms.TextBox txt_PApellido;
@@ -1342,7 +1373,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox Donacion;
+        private System.Windows.Forms.TextBox txt_VoluntarioDonacionOtros;
         private System.Windows.Forms.TextBox txt_IdentificacionPadrino;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox txt_IdentificaciónVoluntario;
@@ -1351,6 +1382,9 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox txt_IdentificacionRepresentante;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox txtNombrePersonaPrueba;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.DateTimePicker dtp_SoloFecha;
     }
 }
 

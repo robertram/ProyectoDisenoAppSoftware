@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Proyecto_Final.Personas;
 
 namespace Proyecto_Final
 {
@@ -22,63 +23,17 @@ namespace Proyecto_Final
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
 
-            ////Esta parte valida que ni los TextBox ni comboBox estén vacios.
+        }
 
-            //if (string.IsNullOrWhiteSpace(txt_NombreCompleto.Text)
-            //    || string.IsNullOrWhiteSpace(txt_PrimerApellido.Text)
-            //    || string.IsNullOrWhiteSpace(txt_SegundoApellido.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Telefono.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Profesion.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Domicilio.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Correo.Text)
-            //    || string.IsNullOrWhiteSpace(cmb_Inscripcion.Text)
-            //    || string.IsNullOrWhiteSpace(cmb_Donacion.Text)
-            //    )
-            //{
-            //    //Si están vacías le avisa al usuario que debe de llenar los campos correctamente. 
-            //    MessageBox.Show("Llene todas las casillas."); 
-            //}
-            //else {
-            //    //Si los datos están correctamente llenados, agrega cada dato con un Append al StringBuilder. 
+        private void btn_AgregarPadrino_Click(object sender, EventArgs e)
+        {
+            Padrino pad = new Padrino(txt_IdentificacionPadrino.Text, dtp_FechaInscripcionPadrino.Text, txt_NombrePadrino.Text, txt_PrimerApellidoPadrino.Text, txt_SegundoApellidoPadrino.Text, txt_TelefonoPadrino.Text, txt_ProfesionPadrino.Text, txt_DomicilioPadrino.Text, txt_CorreoPadrino.Text, cmb_InscripcionPadrino.Text, cmb_DonacionPadrino.Text);
+            pad.AgregarDatosConObjeto(pad);
 
-            //    StringBuilder datosString = new StringBuilder();
-            //    //datosString.Append(dtp_FechaInscripcion.Text + ",");
-            //    datosString.Append(txt_NombreCompleto.Text + ",");
-            //    datosString.Append(txt_PrimerApellido.Text + ",");
-            //    datosString.Append(txt_SegundoApellido.Text + ",");
-            //    datosString.Append(txt_Telefono.Text + ",");
-            //    datosString.Append(txt_Profesion.Text + ",");
-            //    datosString.Append(txt_Domicilio.Text + ",");
-            //    datosString.Append(txt_Correo.Text + ",");
-            //    datosString.Append(cmb_Inscripcion.Text + ",");
-            //    datosString.Append(cmb_Donacion.Text);
+            MessageBox.Show("Padrino Agregado");
 
-            //    //Creamos un array llamado parametros 
-            //    string[] parametros;
 
-            //    //dividimos los paramentros con comas
-            //    parametros = datosString.ToString().Split(',');
-            //    Padrino PadrinoEjemplo = new Padrino();
-
-            //    //Se envía la información al objeto para que se guarde, luego de esto la información se enviará a la base de datos
-            //    //Esta misma información la muestra en un MessageBox
-            //    PadrinoEjemplo.AgregarDato(parametros);
-
-                
-            //    //salida
-            //    StringBuilder mensaje = new StringBuilder();
-            //    //mensaje.AppendLine("Fecha de inscripción: " + PadrinoEjemplo.GetFecha() + ".");
-            //    mensaje.AppendLine("Nombre completo: " + PadrinoEjemplo.GetNombreCompleto() + ".");
-            //    mensaje.AppendLine("Primer apellido: " + PadrinoEjemplo.GetPrimerApellido() + ".");
-            //    mensaje.AppendLine("Segundo apellido: " + PadrinoEjemplo.GetSegundoApellido() + ".");
-            //    mensaje.AppendLine("Teléfono: " + PadrinoEjemplo.GetTelefono() + ".");
-            //    mensaje.AppendLine("Profesión: " + PadrinoEjemplo.GetProfesion() + ".");
-            //    mensaje.AppendLine("Domicilio: " + PadrinoEjemplo.GetDomicilio() + ".");
-            //    mensaje.AppendLine("Correo: " + PadrinoEjemplo.GetCorreo() + ".");
-            //    mensaje.AppendLine("Inscripción: " + PadrinoEjemplo.GetInscripcion() + ".");
-            //    mensaje.AppendLine("Donación: " + PadrinoEjemplo.GetDonacion() + ".");
-            //    MessageBox.Show(PadrinoEjemplo.Tipo_Persona() + "\n" + mensaje.ToString());
-            //}
+            
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
@@ -89,82 +44,7 @@ namespace Proyecto_Final
 
         private void btn_AgregarNino_Click(object sender, EventArgs e)
         {
-            ////Esta parte valida que ni los TextBox ni comboBox estén vacios.
-            //if (string.IsNullOrWhiteSpace(txt_NombreNino.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Apellido1Nino.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Apellido2Nino.Text)
-            //    || string.IsNullOrWhiteSpace(txt_TelefonoNino.Text)
-            //    || string.IsNullOrWhiteSpace(txt_DomicilioNino.Text)
-            //    || string.IsNullOrWhiteSpace(txt_CorreoNino.Text)
-            //    ||string.IsNullOrWhiteSpace(txt_NombreEncargado.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Apellido1Encargado.Text)
-            //    || string.IsNullOrWhiteSpace(txt_Apellido2Encargado.Text)
-            //    || string.IsNullOrWhiteSpace(txt_TelefonoEncargado.Text)
-            //    || string.IsNullOrWhiteSpace(txt_ProfesionEncargado.Text)
-            //    || string.IsNullOrWhiteSpace(txt_DomicilioEncargado.Text)
-            //    || string.IsNullOrWhiteSpace(txt_CorreoEncargado.Text)
-            //    )
-            //{
-            //    //Si están vacías le avisa al usuario que debe de llenar los campos correctamente. 
-            //    MessageBox.Show("Llene todas las casillas.");
-            //}
-            //else
-            //{
-            //    //Si los datos están correctamente llenados, agrega cada dato con un Append al StringBuilder.
-            //    StringBuilder datosStringNino = new StringBuilder();
-            //    //datosStringNino.Append(dtp_FechaInscripcionNino.Text + ",");
-            //    datosStringNino.Append(txt_NombreNino.Text + ",");
-            //    datosStringNino.Append(txt_Apellido1Nino.Text + ",");
-            //    datosStringNino.Append(txt_Apellido2Nino.Text + ",");
-            //    datosStringNino.Append(txt_TelefonoNino.Text + ",");
-            //    datosStringNino.Append(txt_DomicilioNino.Text + ",");
-            //    datosStringNino.Append(txt_CorreoNino.Text);
-
-            //    //Creamos un array llamado parametrosNino 
-            //    string[] parametrosNino;
-
-            //    //dividimos los paramentros con comas
-            //    parametrosNino = datosStringNino.ToString().Split(',');
-            //    Nino NuevoNino = new Nino();
-            //    NuevoNino.AgregarDato(parametrosNino);
-                
-            //    StringBuilder datosStringEncargado = new StringBuilder();
-            //    datosStringEncargado.Append(txt_NombreEncargado.Text + ",");
-            //    datosStringEncargado.Append(txt_Apellido1Encargado.Text + ",");
-            //    datosStringEncargado.Append(txt_Apellido2Encargado.Text + ",");
-            //    datosStringEncargado.Append(txt_TelefonoEncargado.Text + ",");
-            //    datosStringEncargado.Append(txt_ProfesionEncargado.Text + ",");
-            //    datosStringEncargado.Append(txt_DomicilioEncargado.Text + ",");
-            //    datosStringEncargado.Append(txt_CorreoEncargado.Text);
-
-            //    string[] parametrosEncargado;
-            //    parametrosEncargado = datosStringEncargado.ToString().Split(',');
-            //    Encargado_Nino NuevoEncargado = new Encargado_Nino();
-                
-            //    //Se envía la información al objeto para que se guarde, luego de esto la información se enviará a la base de datos
-            //    //Esta misma información la muestra en un MessageBox
-            //    NuevoEncargado.AgregarDato(parametrosEncargado);
-
-            //    //salida
-            //    StringBuilder mensaje = new StringBuilder();
-            //    mensaje.AppendLine("Niño");
-            //   // mensaje.AppendLine("Fecha de Inscripción: " + NuevoNino.GetFecha() + ".");
-            //    mensaje.AppendLine("Nombre: " + NuevoNino.GetNombreCompleto() + ".");
-            //    mensaje.AppendLine("Primer apellido: " + NuevoNino.GetPrimerApellido() + ".");
-            //    mensaje.AppendLine("Segundo apellido: " + NuevoNino.GetSegundoApellido() + ".");
-            //    mensaje.AppendLine("Teléfono: " + NuevoNino.GetTelefono() + ".");
-            //    mensaje.AppendLine("Correo: " + NuevoNino.GetCorreo() + ".");
-            //    mensaje.AppendLine("Domicilio: " + NuevoNino.GetDomicilio() + ".");
-            //    mensaje.AppendLine("");
-            //    mensaje.AppendLine("Encargado");
-            //    mensaje.AppendLine("Nombre: " + NuevoEncargado.GetNombreCompleto() + ".");
-            //    mensaje.AppendLine("Primer apellido: " + NuevoEncargado.GetPrimerApellido() + ".");
-            //    mensaje.AppendLine("Segundo apellido: " + NuevoEncargado.GetSegundoApellido() + ".");
-            //    mensaje.AppendLine("Teléfono: " + NuevoEncargado.GetTelefono() + ".");
-            //    mensaje.AppendLine("Correo: " + NuevoEncargado.GetCorreo() + ".");
-            //    mensaje.AppendLine("Domicilio: " + NuevoEncargado.GetDomicilio() + ".");
-            //    MessageBox.Show(NuevoNino.Tipo_Persona() + "\n" + mensaje.ToString());
-            //}
+            MessageBox.Show("Niño");
         }
 
         private void btn_AgregarPatrocinador_Click(object sender, EventArgs e)
@@ -227,63 +107,21 @@ namespace Proyecto_Final
         private void btn_AgregarVoluntario_Click(object sender, EventArgs e)
         {
 
-            
 
-            Voluntario voluntarioEjemplo = new Voluntario(dtp_FechaInscripcionVoluntario.Text, txt_IdentificaciónVoluntario.Text, txt_NombreVoluntario.Text, txt_Apellido1Voluntario.Text, txt_Apellido2Voluntario.Text, txt_TelefonoVoluntario.Text, txt_ProfesionVoluntario.Text, txt_DomicilioVoluntario.Text, txt_CorreoVoluntario.Text, cmb_InscripcionVoluntario.Text, cmb_DonacionVoluntario.Text);
-            
 
+            Voluntario voluntarioEjemplo = new Voluntario(txt_IdentificaciónVoluntario.Text/*, dtp_FechaInscripcionVoluntario.Text*/, txt_NombreVoluntario.Text, txt_Apellido1Voluntario.Text, txt_Apellido2Voluntario.Text, txt_TelefonoVoluntario.Text, txt_ProfesionVoluntario.Text, txt_DomicilioVoluntario.Text, cmb_InscripcionVoluntario.Text, cmb_DonacionVoluntario.Text, txt_CorreoVoluntario.Text);
+            
             voluntarioEjemplo.AgregarDatosConObjeto(voluntarioEjemplo);
 
-                //voluntarioEjemplo.Agregar_DatosPersona(txt_NombreVoluntario.Text, txt_Apellido1Voluntario.Text, txt_Apellido2Voluntario.Text, txt_TelefonoVoluntario.Text, txt_ProfesionVoluntario.Text, txt_DomicilioVoluntario.Text, txt_CorreoVoluntario.Text, cmb_InscripcionVoluntario.Text, cmb_DonacionVoluntario.Text/*, dtp_FechaInscripcionVoluntario.Text*/);
+            PersonaPrueba per = new PersonaPrueba(txtNombrePersonaPrueba.Text);
+            per.AgregarDatosConObjeto(per);
 
 
+            //Fecha fe = new Fecha(dtp_SoloFecha.Value.Date);
+            //fe.AgregarDatosConObjeto(fe);
 
 
-            //dtp_FechaInscripcionVoluntario.Text
-
-            /*
-            //Si los datos están correctamente llenados, agrega cada dato con un Append al StringBuilder.
-            StringBuilder datosString = new StringBuilder();
-                datosString.Append(dtp_FechaInscripcionVoluntario.Text + ",");
-                datosString.Append(txt_NombreVoluntario.Text + ",");
-                datosString.Append(txt_Apellido1Voluntario.Text + ",");
-                datosString.Append(txt_Apellido2Voluntario.Text + ",");
-                datosString.Append(txt_TelefonoVoluntario.Text + ",");
-                datosString.Append(txt_ProfesionVoluntario.Text + ",");
-                datosString.Append(txt_DomicilioVoluntario.Text + ",");
-                datosString.Append(txt_CorreoVoluntario.Text + ",");
-                datosString.Append(cmb_InscripcionVoluntario.Text + ",");
-                datosString.Append(cmb_DonacionVoluntario.Text);
-
-
-            //Creamos un array llamado parametros 
-            string[] parametros;
-
-            //dividimos los paramentros con comas
-            parametros = datosString.ToString().Split(',');
-
-
-            //voluntarioEjemplo.Validacion_DatosPersona(txt_NombreVoluntario.Text);
-
-            //Se envía la información al objeto para que se guarde, luego de esto la información se enviará a la base de datos
-            //Esta misma información la muestra en un MessageBox
-            voluntarioEjemplo.AgregarDato(parametros);
-                //salida
-                StringBuilder mensaje = new StringBuilder();
-                mensaje.AppendLine("Fecha de inscripción: " + voluntarioEjemplo.GetFecha() + ".");
-                mensaje.AppendLine("Nombre completo: " + voluntarioEjemplo.GetNombreCompleto() + ".");
-                mensaje.AppendLine("Primer apellido: " + voluntarioEjemplo.GetPrimerApellido() + ".");
-                mensaje.AppendLine("Segundo apellido: " + voluntarioEjemplo.GetSegundoApellido() + ".");
-                mensaje.AppendLine("Teléfono: " + voluntarioEjemplo.GetTelefono() + ".");
-                mensaje.AppendLine("Profesión: " + voluntarioEjemplo.GetProfesion() + ".");
-                mensaje.AppendLine("Domicilio: " + voluntarioEjemplo.GetDomicilio() + ".");
-                mensaje.AppendLine("Correo: " + voluntarioEjemplo.GetCorreo() + ".");
-                mensaje.AppendLine("Inscripción: " + voluntarioEjemplo.GetInscripcion() + ".");
-            mensaje.AppendLine("Donación: " + voluntarioEjemplo.GetDonacion() + ".");
-                mensaje.AppendLine("Validacion "+ voluntarioEjemplo.Validacion_DatosPersona(txt_NombreVoluntario.Text).ToString());
-                MessageBox.Show(voluntarioEjemplo.Tipo_Persona() + "\n" + mensaje.ToString());*/
-
-
+            //txtNombrePersonaPrueba.Text
 
         }
 
@@ -291,12 +129,14 @@ namespace Proyecto_Final
         {
             if (cmb_DonacionVoluntario.SelectedItem.ToString().Equals("Otros"))
             {
-                Donacion.Visible = true;
+                txt_VoluntarioDonacionOtros.Visible = true;
             }
             else
             {
-                Donacion.Visible= false;
+                txt_VoluntarioDonacionOtros.Visible= false;
             }
         }
+
+        
     }
 }

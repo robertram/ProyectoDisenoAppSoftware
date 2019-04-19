@@ -36,11 +36,11 @@ namespace Proyecto_Final
         /// <param name="correo"></param>
         /// <param name="inscripcion"></param>
         /// <param name="donacion"></param>
-        public Voluntario(string identificacion, string fecha, string nombreCompleto, string primerApellido, string segundoApellido, string telefono, string profesion, string domicilio, string correo, /*string identificacion,*/ string inscripcion, string donacion)
+        public Voluntario(string identificacion, /*, string fecha, */string nombreCompleto, string primerApellido, string segundoApellido, string telefono, string profesion, string domicilio, string correo, /*string identificacion,*/ string inscripcion, string donacion)
         {
             this.Set_identificacion(identificacion);
-            this.Set_fecha(fecha);
-            this.Set_nombreCompleto(nombreCompleto);
+            //this.Set_fecha(fecha);
+            this.Set_nombre(nombreCompleto);
             this.Set_primerApellido(primerApellido);
             this.Set_segundoApellido(segundoApellido);
             this.Set_telefono(telefono);
@@ -98,18 +98,18 @@ namespace Proyecto_Final
                     {
                         command.Connection = connection;            // <== lacking
                         command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into Tbl_Voluntario (identificacion, fecha, nombre, apellido1, apellido2, telefono, profesion, domicilio, correo, inscripcion, donacion) VALUES (@identificacion, @fecha, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @correo, @inscripcion, @donacion)";
-                        command.Parameters.AddWithValue("@identificacion", voluntario.Get_identificacion());
-                        command.Parameters.AddWithValue("@fecha", voluntario.Get_fecha());
-                        command.Parameters.AddWithValue("@nombre", voluntario.Get_nombreCompleto());
+                        command.CommandText = "INSERT into Tbl_Voluntario (identificacion, nombre, apellido1, apellido2, telefono, profesion, domicilio, inscripcion, donacion, correo) VALUES (@identificacion,  @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @inscripcion, @donacion, @correo)";
+                        command.Parameters.AddWithValue("@identificacion", voluntario.Get_identificacion()); 
+                        //command.Parameters.AddWithValue("@fecha", voluntario.Get_fecha());
+                        command.Parameters.AddWithValue("@nombre", voluntario.Get_nombre());
                         command.Parameters.AddWithValue("@apellido1", voluntario.Get_primerApellido());
                         command.Parameters.AddWithValue("@apellido2", voluntario.Get_segundoApellido());
                         command.Parameters.AddWithValue("@telefono", voluntario.Get_telefono());
                         command.Parameters.AddWithValue("@profesion", voluntario.Get_profesion());
                         command.Parameters.AddWithValue("@domicilio", voluntario.Get_domicilio());
-                        command.Parameters.AddWithValue("@correo", voluntario.Get_correo());
                         command.Parameters.AddWithValue("@inscripcion", _inscripcion);
                         command.Parameters.AddWithValue("@donacion", _donacion);
+                        command.Parameters.AddWithValue("@correo", voluntario.Get_correo());
                         
 
                         try
@@ -119,7 +119,7 @@ namespace Proyecto_Final
                         }
                         catch (SqlException)
                         {
-                            MessageBox.Show("Entro a la base de datos pero no agrega");
+                            MessageBox.Show("Catch Voluntario");
                         }
                         finally
                         {
@@ -130,7 +130,7 @@ namespace Proyecto_Final
             }
             else
             {
-                MessageBox.Show("No se logró guardar los datos en la base de datos");
+                MessageBox.Show("No se logró guardar los datos en la base de datos Voluntario");
                 return false;
             }
             return true;
@@ -146,7 +146,7 @@ namespace Proyecto_Final
         /// </returns>
         public bool ValidarConObjeto(Voluntario voluntario)
         {
-            if (string.IsNullOrWhiteSpace(voluntario.Get_nombreCompleto())
+            if (string.IsNullOrWhiteSpace(voluntario.Get_nombre())
                 || string.IsNullOrWhiteSpace(voluntario.Get_fecha())
                 || string.IsNullOrWhiteSpace(voluntario.Get_primerApellido())
                 || string.IsNullOrWhiteSpace(voluntario.Get_segundoApellido())

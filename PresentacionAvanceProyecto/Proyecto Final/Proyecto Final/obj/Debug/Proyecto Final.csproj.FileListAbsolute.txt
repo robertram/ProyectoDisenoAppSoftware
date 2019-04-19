@@ -50,3 +50,14 @@ C:\Users\Admin\Desktop\Proyecto-Dise-o-App-Software-master\PresentacionAvancePro
 C:\Users\Admin\Desktop\Proyecto-Dise-o-App-Software-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
 C:\Users\Admin\Desktop\Proyecto-Dise-o-App-Software-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.cache
 C:\Users\Admin\Desktop\Proyecto-Dise-o-App-Software-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe.config
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.pdb
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.AlimentandoEsperanzas.resources
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Properties.Resources.resources
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
