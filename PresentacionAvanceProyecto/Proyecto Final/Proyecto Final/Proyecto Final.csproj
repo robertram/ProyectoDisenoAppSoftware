@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IEncargadoNino.cs" />
+    <Compile Include="Interfaces\INino.cs" />
     <Compile Include="Interfaces\IPadrino.cs" />
     <Compile Include="Interfaces\IPatrocinador.cs" />
     <Compile Include="Otras\MetodosLogin.cs" />

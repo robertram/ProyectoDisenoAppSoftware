@@ -64,7 +64,7 @@ namespace Proyecto_Final
             return _donacion;
         }
 
-        public bool ValidarConObjeto(Padrino padrino)//Correo Allow Nulls
+        public bool ValidarConObjeto(Padrino padrino)
         {
             if (string.IsNullOrWhiteSpace(padrino.Get_identificacion())
                 || string.IsNullOrWhiteSpace(padrino.Get_fecha())
