@@ -92,7 +92,7 @@ namespace Proyecto_Final
         {
             if (ValidarConObjeto(voluntario))
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-OBB3PNQ;Initial Catalog=Prueba;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=JOSE-DAVID" + @"\JD;Initial Catalog=Prueba;Integrated Security=True"))
                 {
                     using (SqlCommand command = new SqlCommand())
                     {

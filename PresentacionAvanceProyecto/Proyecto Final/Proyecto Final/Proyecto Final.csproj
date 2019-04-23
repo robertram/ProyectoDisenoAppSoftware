@@ -46,24 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IEncargadoNino.cs" />
-    <Compile Include="Interfaces\INino.cs" />
-    <Compile Include="Interfaces\IPadrino.cs" />
-    <Compile Include="Interfaces\IPatrocinador.cs" />
     <Compile Include="Otras\MetodosLogin.cs" />
-    <Compile Include="Personas\Encargado_Nino.cs" />
-    <Compile Include="Interfaces\IVoluntario.cs" />
-    <Compile Include="PersonasDependientes\Nino.cs" />
-    <Compile Include="Personas\Padrino.cs" />
-    <Compile Include="Personas\Patrocinador.cs" />
-    <Compile Include="Personas\Voluntario.cs" />
+    <Compile Include="Personas\ClienteDePersonas.cs" />
+    <Compile Include="Personas\Facade.cs" />
+    <Compile Include="Personas\Persona.cs" />
+    <Compile Include="SQL\AgregarPersona.cs" />
+    <Compile Include="SQL\ConsultasSQL.cs" />
     <Compile Include="Ventanas\AlimentandoEsperanzas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\AlimentandoEsperanzas.Designer.cs">
       <DependentUpon>AlimentandoEsperanzas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personas\AbstractPersona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ventanas\Login.cs">

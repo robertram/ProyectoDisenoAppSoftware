@@ -61,3 +61,25 @@ C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proy
 C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
 C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe.config
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.pdb
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csprojAssemblyReference.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.AlimentandoEsperanzas.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Properties.Resources.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe.config
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.pdb
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.AlimentandoEsperanzas.resources
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Properties.Resources.resources
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
