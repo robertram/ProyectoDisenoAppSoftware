@@ -13,7 +13,7 @@ namespace Proyecto_Final.SQL
     /// </summary>
     class ConsultasSQL
     {
-        private SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-OBB3PNQ;Initial Catalog=Prueba;Integrated Security=True");
+        private SqlConnection conexion = new SqlConnection("Data Source = 603 - 18; Initial Catalog = Prueba; Integrated Security = True");
         private DataSet ds;
 
         /// <summary>

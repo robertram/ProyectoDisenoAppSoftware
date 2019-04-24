@@ -68,15 +68,7 @@ namespace Proyecto_Final
 
             agregar.AgregarEncargadoNino(encargado);
 
-
-            //Nino nino = new Nino(txt_NombreNino.Text, txt_Apellido1Nino.Text, txt_Apellido2Nino.Text, txt_TelefonoNino.Text, txt_DomicilioNino.Text, txt_CorreoNino.Text, fechadtpNino);
-
-            //nino.AgregarDatosConObjeto(nino);
-            ////No funciona aún
-
-            //Encargado_Nino encargado = new Encargado_Nino(fechadtpNino, txt_IdentificacionEncargadoNino.Text, txt_NombreEncargado.Text, txt_Apellido1Encargado.Text, txt_Apellido2Encargado.Text, txt_TelefonoEncargado.Text, txt_ProfesionEncargado.Text, txt_DomicilioEncargado.Text, txt_CorreoEncargado.Text);
-            //encargado.AgregarDatosConObjeto(encargado);
-            ////No funciona aún
+            
         }
 
         private void btn_AgregarPatrocinador_Click(object sender, EventArgs e)
@@ -89,11 +81,7 @@ namespace Proyecto_Final
 
             AgregarPersona agregar = new AgregarPersona();
             agregar.AgregarPatrocinador(patrocinador);
-
-
-            //Patrocinador patrocinador = new Patrocinador(txt_IdentificacionRepresentantePatrocinador.Text, txt_NombreEmpresaPatrocinadora.Text, txt_TipoEmpresaPatrocinadora.Text, cmb_TipoPatrocinio.Text, txt_NombreRepresentantePatrocinador.Text, txt_PrimerApellidoPatrocinador.Text, txt_SegundoApellidoPatrocinador.Text, txt_TelefonoRepresentantePatrocinador.Text, txt_CorreoRepresentantePatrocinador.Text);
-            //patrocinador.AgregarDatosConObjeto(patrocinador);
-            ////No funciona aún
+            
         }
 
 
@@ -112,12 +100,7 @@ namespace Proyecto_Final
             agregar.AgregarVoluntario(volunt);
 
 
-            //Instancia con los datos
-            //Voluntario voluntarioEjemplo = new Voluntario(txt_IdentificaciónVoluntario.Text, fechadtpVoluntario, txt_NombreVoluntario.Text, txt_Apellido1Voluntario.Text, txt_Apellido2Voluntario.Text, txt_TelefonoVoluntario.Text, txt_ProfesionVoluntario.Text, txt_DomicilioVoluntario.Text, cmb_InscripcionVoluntario.Text, cmb_DonacionVoluntario.Text, txt_CorreoVoluntario.Text);
             
-            //Método Agregar Datos
-            //voluntarioEjemplo.AgregarDatosConObjeto(voluntarioEjemplo);
-
             
         }
 

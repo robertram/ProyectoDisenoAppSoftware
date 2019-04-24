@@ -83,3 +83,14 @@ C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyec
 C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
 C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.cache
 C:\Users\Admin\Desktop\ProyectoDisenoAppSoftware-master\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe.config
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.pdb
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csprojResolveAssemblyReference.cache
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.AlimentandoEsperanzas.resources
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Properties.Resources.resources
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.Cache
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
+C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb

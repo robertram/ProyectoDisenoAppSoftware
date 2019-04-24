@@ -12,11 +12,13 @@ namespace Proyecto_Final.SQL
 {
     class AgregarPersona
     {
+        private string stringConexion = "Data Source=603-18;Initial Catalog=Prueba;Integrated Security=True";
+
         public bool AgregarVoluntario(Persona persona)
         {
             if (true/*ValidarConObjeto(voluntario)*/)
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-OBB3PNQ;Initial Catalog=Prueba;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(stringConexion))
                 {
                     using (SqlCommand command = new SqlCommand())
                     {
@@ -66,7 +68,7 @@ namespace Proyecto_Final.SQL
         {
             if (true/*ValidacionDatosNino(nino)*/)
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-OBB3PNQ;Initial Catalog=Prueba;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(stringConexion))
                 {
                     using (SqlCommand command = new SqlCommand())
                     {
@@ -112,7 +114,7 @@ namespace Proyecto_Final.SQL
         {
             if (true/*ValidacionDatosEncargadoNino(encargado)*/)
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-OBB3PNQ;Initial Catalog=Prueba;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(stringConexion))
                 {
                     using (SqlCommand command = new SqlCommand())
                     {
@@ -159,7 +161,7 @@ namespace Proyecto_Final.SQL
         {
             if (true/*ValidarConObjeto(patrocinador)*/)
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-OBB3PNQ;Initial Catalog=Prueba;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(stringConexion))
                 {
                     using (SqlCommand command = new SqlCommand())
                     {
@@ -208,7 +210,7 @@ namespace Proyecto_Final.SQL
         {
             if (true/*ValidarConObjeto(padrino)*/)
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-OBB3PNQ;Initial Catalog=Prueba;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(stringConexion))
                 {
                     using (SqlCommand command = new SqlCommand())
                     {

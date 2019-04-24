@@ -1,3 +1,10 @@
 Cambiar formato fecha
 
 Preguntar profe si tantos métodos en una clase está bien
+
+Si Identificacion Niño e Identificacion EncargadoNiño no está no agrega aunque en la base de datos esté el allow nulls
+
+Poner también el Login
+
+Preguntar= Es necesario hacer el método de validación si cuando no agrega la base de datos porque no hay un dato le devuelve el catch
+
