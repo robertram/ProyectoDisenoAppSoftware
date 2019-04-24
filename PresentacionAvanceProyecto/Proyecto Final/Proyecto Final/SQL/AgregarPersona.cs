@@ -12,7 +12,7 @@ namespace Proyecto_Final.SQL
 {
     class AgregarPersona
     {
-        private string stringConexion = "Data Source=603-18;Initial Catalog=Prueba;Integrated Security=True";
+        private string stringConexion = "Data Source=401-05;Initial Catalog=Prueba;Integrated Security=True";
 
         public bool AgregarVoluntario(Persona persona)
         {
@@ -90,7 +90,7 @@ namespace Proyecto_Final.SQL
                             int recordsAffected = command.ExecuteNonQuery();
                             MessageBox.Show("Se abrió la conexión");
                         }
-                        catch (SqlException)
+                        catch (SqlException ex)
                         {
                             MessageBox.Show("Catch Nino");
                         }
@@ -137,7 +137,7 @@ namespace Proyecto_Final.SQL
                             int recordsAffected = command.ExecuteNonQuery();
                             MessageBox.Show("Se abrió la conexión");
                         }
-                        catch (SqlException)
+                        catch (SqlException ex)
                         {
                             MessageBox.Show("Catch Encargado");
                         }
@@ -186,7 +186,7 @@ namespace Proyecto_Final.SQL
                             int recordsAffected = command.ExecuteNonQuery();
                             MessageBox.Show("Se abrió la conexión");
                         }
-                        catch (SqlException)
+                        catch (SqlException ex)
                         {
                             MessageBox.Show("Catch Patrocinadores");
                         }
@@ -235,7 +235,7 @@ namespace Proyecto_Final.SQL
                             int recordsAffected = command.ExecuteNonQuery();
                             MessageBox.Show("Se abrió la conexión");
                         }
-                        catch (SqlException)
+                        catch (SqlException ex)
                         {
                             MessageBox.Show("Catch Padrino");
                         }

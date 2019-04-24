@@ -7,4 +7,13 @@ Si Identificacion Niño e Identificacion EncargadoNiño no está no agrega aunque e
 Poner también el Login
 
 Preguntar= Es necesario hacer el método de validación si cuando no agrega la base de datos porque no hay un dato le devuelve el catch
+Validar Si
 
+
+USE [Prueba]
+GO
+
+UPDATE [dbo].[tbl_Usuario]
+   SET [Usuario] = <Usuario, varchar(15),>
+      ,[Contraseña] = <Contraseña, varchar(15),>
+GO
