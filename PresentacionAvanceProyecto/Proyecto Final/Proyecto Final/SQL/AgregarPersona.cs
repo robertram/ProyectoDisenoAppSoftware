@@ -10,246 +10,288 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final.SQL
 {
-    class AgregarPersona
+    /// <summary>
+    /// Clase que tiene los métodos para agregar los datos de cada persona a su respectiva tabla. 
+    /// Se utiliza Sql Server como Base de Datos. Con su lenguaje se logra introducir los datos en un comando. 
+    /// </summary>
+    public class AgregarPersona
     {
-        private string stringConexion = "Data Source=401-05;Initial Catalog=Prueba;Integrated Security=True";
+        
+        //Instancia ValidacionDatos 
+        ValidacionDatos validacion = new ValidacionDatos();
 
-        public bool AgregarVoluntario(Persona persona)
+        /// <summary>
+        /// Método que agrega la respectiva persona a su respectiva tabla
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <param name="proxy"></param>
+        /// <returns>true= si logró intropducir los datos
+        /// false= si no logró introducir los datos</returns>
+        public bool AgregarVoluntario(Persona persona, Proxy proxy)
         {
-            if (true/*ValidarConObjeto(voluntario)*/)
+            
+            if (validacion.Validacion_Voluntario(persona)) //Si no falta ningún dato, entra 
             {
-                using (SqlConnection connection = new SqlConnection(stringConexion))
+                using (proxy.conexionSql) //Llama a la instancia SqlConnection que está en la clase Proxy 
                 {
-                    using (SqlCommand command = new SqlCommand())
+                    using (proxy.command)
                     {
-                        command.Connection = connection;            // <== lacking
-                        command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into Tbl_Voluntario (identificacion, fecha, nombre, apellido1, apellido2, telefono, profesion, domicilio, inscripcion, donacion, correo) VALUES (@identificacion, @fecha, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @inscripcion, @donacion, @correo)";
-                        command.Parameters.AddWithValue("@identificacion", persona.identificacion);
-                        command.Parameters.AddWithValue("@fecha", persona.fecha);
-                        command.Parameters.AddWithValue("@nombre", persona.nombre);
-                        command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
-                        command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
-                        command.Parameters.AddWithValue("@telefono", persona.telefono);
-                        command.Parameters.AddWithValue("@profesion", persona.profesion);
-                        command.Parameters.AddWithValue("@domicilio", persona.domicilio);
-                        command.Parameters.AddWithValue("@inscripcion", persona.inscripcion);
-                        command.Parameters.AddWithValue("@donacion", persona.donacion);
-                        command.Parameters.AddWithValue("@correo", persona.correo);
-
+                        proxy.command.Connection = proxy.conexionSql;
+                        proxy.command.CommandType = CommandType.Text; //Se le asigna a Texto el tipo de comando 
+                        proxy.command.CommandText = "INSERT into Tbl_Voluntario (identificacion, fecha, nombre, apellido1, apellido2, telefono, profesion, domicilio, inscripcion, donacion, correo) VALUES (@identificacion, @fecha, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @inscripcion, @donacion, @correo)";
+                        proxy.command.Parameters.AddWithValue("@identificacion", persona.identificacion);
+                        proxy.command.Parameters.AddWithValue("@fecha", persona.fecha);
+                        proxy.command.Parameters.AddWithValue("@nombre", persona.nombre);
+                        proxy.command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
+                        proxy.command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
+                        proxy.command.Parameters.AddWithValue("@telefono", persona.telefono);
+                        proxy.command.Parameters.AddWithValue("@profesion", persona.profesion);
+                        proxy.command.Parameters.AddWithValue("@domicilio", persona.domicilio);
+                        proxy.command.Parameters.AddWithValue("@inscripcion", persona.inscripcion);
+                        proxy.command.Parameters.AddWithValue("@donacion", persona.donacion);
+                        proxy.command.Parameters.AddWithValue("@correo", persona.correo);
+                        //Se añaden los valores al comando
 
                         try
                         {
-                            connection.Open();
-                            int recordsAffected = command.ExecuteNonQuery();
-                            MessageBox.Show("Se abrió la conexión");
+                            proxy.conexionSql.Open(); //Abre la conexión
+                            int recordsAffected = proxy.command.ExecuteNonQuery(); //Ejecuta el comando
+                            MessageBox.Show("Datos de Voluntario Agregado");   //Imprime
                         }
                         catch (SqlException)
                         {
-                            MessageBox.Show("Catch Voluntario");
+                            MessageBox.Show("Error al Agregar Voluntario"); //Imprime
                         }
                         finally
                         {
-                            MessageBox.Show("Se cerró la conexión");
-                            connection.Close();
+                            //MessageBox.Show("Se cerró la conexión"); //Imprime
+                            proxy.conexionSql.Close();  //Cierra la conexión
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Faltan datos Voluntario");
+                MessageBox.Show("Faltan datos Voluntario"); //Imprime
                 return false;
             }
             return true;
         }
 
-        public bool AgregarNino(Persona persona)
+        /// <summary>
+        /// Método que agrega la respectiva persona a su respectiva tabla
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <param name="proxy"></param>
+        /// <returns>true= si logró intropducir los datos
+        /// false= si no logró introducir los datos</returns>
+        public bool AgregarNino(Persona persona, Proxy proxy)
         {
-            if (true/*ValidacionDatosNino(nino)*/)
+            if (validacion.Validacion_Nino(persona)) //Si no falta ningún dato, entra 
             {
-                using (SqlConnection connection = new SqlConnection(stringConexion))
+                using (proxy.conexionSql) //Llama a la instancia SqlConnection que está en la clase Proxy 
                 {
-                    using (SqlCommand command = new SqlCommand())
+                    using (proxy.command)
                     {
-                        command.Connection = connection;            // <== lacking
-                        command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into Tbl_Nino (identificacion, nombre, apellido1, apellido2, telefono, domicilio, correo, fecha) VALUES (@identificacion, @nombre, @apellido1, @apellido2, @telefono, @domicilio, @correo, @fecha)";
-                        command.Parameters.AddWithValue("@identificacion", persona.identificacion);
-                        command.Parameters.AddWithValue("@nombre", persona.nombre);
-                        command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
-                        command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
-                        command.Parameters.AddWithValue("@telefono", persona.telefono);
-                        command.Parameters.AddWithValue("@domicilio", persona.domicilio);
-                        command.Parameters.AddWithValue("@correo", persona.correo);
-                        command.Parameters.AddWithValue("@fecha", persona.fecha);
-
+                        proxy.command.Connection = proxy.conexionSql;
+                        proxy.command.CommandType = CommandType.Text; //Se le asigna a Texto el tipo de comando 
+                        proxy.command.CommandText = "INSERT into Tbl_Nino (identificacion, nombre, apellido1, apellido2, telefono, domicilio, correo, fecha) VALUES (@identificacion, @nombre, @apellido1, @apellido2, @telefono, @domicilio, @correo, @fecha)";
+                        proxy.command.Parameters.AddWithValue("@identificacion", persona.identificacion);
+                        proxy.command.Parameters.AddWithValue("@nombre", persona.nombre);
+                        proxy.command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
+                        proxy.command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
+                        proxy.command.Parameters.AddWithValue("@telefono", persona.telefono);
+                        proxy.command.Parameters.AddWithValue("@domicilio", persona.domicilio);
+                        proxy.command.Parameters.AddWithValue("@correo", persona.correo);
+                        proxy.command.Parameters.AddWithValue("@fecha", persona.fecha);
+                        //Se añaden los valores al comando
                         try
                         {
-                            connection.Open();
-                            int recordsAffected = command.ExecuteNonQuery();
-                            MessageBox.Show("Se abrió la conexión");
+                            proxy.conexionSql.Open(); //Abre la conexión
+                            int recordsAffected = proxy.command.ExecuteNonQuery();
+                            MessageBox.Show("Datos de Niño Agregado");   //Imprime
                         }
                         catch (SqlException ex)
                         {
-                            MessageBox.Show("Catch Nino");
+                            MessageBox.Show("Error al Agregar Niño"); //Imprime
                         }
                         finally
                         {
-                            MessageBox.Show("Se cerró la conexión");
-                            connection.Close();
+                            //MessageBox.Show("Se cerró la conexión"); //Imprime
+                            proxy.conexionSql.Close(); //Cierra la conexión
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Faltan datos Nino");
+                MessageBox.Show("Faltan datos Niño"); //Imprime
                 return false;
             }
             return true;
         }
 
-        public bool AgregarEncargadoNino(Persona persona)
+        /// <summary>
+        /// Método que agrega la respectiva persona a su respectiva tabla
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <param name="proxy"></param>
+        /// <returns>true= si logró intropducir los datos
+        /// false= si no logró introducir los datos</returns>
+        public bool AgregarEncargadoNino(Persona persona, Proxy proxy)
         {
-            if (true/*ValidacionDatosEncargadoNino(encargado)*/)
+            if (validacion.Validacion_EncargadoNino(persona)) //Si no falta ningún dato, entra 
             {
-                using (SqlConnection connection = new SqlConnection(stringConexion))
+                using (proxy.conexionSql) //Llama a la instancia SqlConnection que está en la clase Proxy 
                 {
-                    using (SqlCommand command = new SqlCommand())
+                    using (proxy.command)
                     {
-                        command.Connection = connection;            // <== lacking
-                        command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into Tbl_EncargadoNino (fecha, identificacion, nombre, apellido1, apellido2, telefono, profesion, domicilio, correo) VALUES (@fecha, @identificacion, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @correo)";
-                        command.Parameters.AddWithValue("@fecha", persona.fecha);
-                        command.Parameters.AddWithValue("@identificacion", persona.identificacion);
-                        command.Parameters.AddWithValue("@nombre", persona.nombre);
-                        command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
-                        command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
-                        command.Parameters.AddWithValue("@telefono", persona.telefono);
-                        command.Parameters.AddWithValue("@profesion", persona.profesion);
-                        command.Parameters.AddWithValue("@domicilio", persona.domicilio);
-                        command.Parameters.AddWithValue("@correo", persona.correo);
-
+                        proxy.command.Connection = proxy.conexionSql;
+                        proxy.command.CommandType = CommandType.Text; //Se le asigna a Texto el tipo de comando 
+                        proxy.command.CommandText = "INSERT into Tbl_EncargadoNino (fecha, identificacion, nombre, apellido1, apellido2, telefono, profesion, domicilio, correo) VALUES (@fecha, @identificacion, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @correo)";
+                        proxy.command.Parameters.AddWithValue("@fecha", persona.fecha);
+                        proxy.command.Parameters.AddWithValue("@identificacion", persona.identificacion);
+                        proxy.command.Parameters.AddWithValue("@nombre", persona.nombre);
+                        proxy.command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
+                        proxy.command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
+                        proxy.command.Parameters.AddWithValue("@telefono", persona.telefono);
+                        proxy.command.Parameters.AddWithValue("@profesion", persona.profesion);
+                        proxy.command.Parameters.AddWithValue("@domicilio", persona.domicilio);
+                        proxy.command.Parameters.AddWithValue("@correo", persona.correo);
+                        //Se añaden los valores al comando
                         try
                         {
-                            connection.Open();
-                            int recordsAffected = command.ExecuteNonQuery();
-                            MessageBox.Show("Se abrió la conexión");
+                            proxy.conexionSql.Open(); //Abre la conexión
+                            int recordsAffected = proxy.command.ExecuteNonQuery();
+                            MessageBox.Show("Datos de Encargado Agregado");   //Imprime
                         }
                         catch (SqlException ex)
                         {
-                            MessageBox.Show("Catch Encargado");
+                            MessageBox.Show("Error al Agregar Encargado"); //Imprime
                         }
                         finally
                         {
-                            connection.Close();
-                            MessageBox.Show("Se cerró la conexión");
+                            proxy.conexionSql.Close(); //Cierra la conexión
+                            //MessageBox.Show("Se cerró la conexión"); //Imprime
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Faltan datos Encargado");
+                MessageBox.Show("Faltan datos Encargado"); //Imprime
                 return false;
             }
             return true;
         }
 
-        public bool AgregarPatrocinador(Persona persona)
+        /// <summary>
+        /// Método que agrega la respectiva persona a su respectiva tabla
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <param name="proxy"></param>
+        /// <returns>true= si logró intropducir los datos
+        /// false= si no logró introducir los datos</returns>
+        public bool AgregarPatrocinador(Persona persona, Proxy proxy)
         {
-            if (true/*ValidarConObjeto(patrocinador)*/)
+            if (validacion.Validacion_Patrocinador(persona)) //Si no falta ningún dato, entra 
             {
-                using (SqlConnection connection = new SqlConnection(stringConexion))
+                using (proxy.conexionSql) //Llama a la instancia SqlConnection que está en la clase Proxy 
                 {
-                    using (SqlCommand command = new SqlCommand())
+                    using (proxy.command)
                     {
-                        command.Connection = connection;            // <== lacking
-                        command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into Tbl_Patrocinadores (fecha, nombre_empresa, tipo_empresa, tipo_patrocinio, identificacion, nombre, apellido1, apellido2, telefono, correo) VALUES (@fecha, @nombre_empresa, @tipo_empresa, @tipo_patrocinio, @identificacion, @nombre, @apellido1, @apellido2, @telefono, @correo)";
-                        command.Parameters.AddWithValue("@fecha", persona.fecha);
-                        command.Parameters.AddWithValue("@nombre_empresa", persona.nombreEmpresa);
-                        command.Parameters.AddWithValue("@tipo_empresa", persona.tipoEmpresa);
-                        command.Parameters.AddWithValue("@tipo_patrocinio", persona.tipoPatrocinio);
-                        command.Parameters.AddWithValue("@identificacion", persona.identificacion);
-                        command.Parameters.AddWithValue("@nombre", persona.nombre);
-                        command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
-                        command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
-                        command.Parameters.AddWithValue("@telefono", persona.telefono);
-                        command.Parameters.AddWithValue("@correo", persona.correo);
-
+                        proxy.command.Connection = proxy.conexionSql;
+                        proxy.command.CommandType = CommandType.Text; //Se le asigna a Texto el tipo de comando 
+                        proxy.command.CommandText = "INSERT into Tbl_Patrocinadores (fecha, nombre_empresa, tipo_empresa, tipo_patrocinio, identificacion, nombre, apellido1, apellido2, telefono, correo) VALUES (@fecha, @nombre_empresa, @tipo_empresa, @tipo_patrocinio, @identificacion, @nombre, @apellido1, @apellido2, @telefono, @correo)";
+                        proxy.command.Parameters.AddWithValue("@fecha", persona.fecha);
+                        proxy.command.Parameters.AddWithValue("@nombre_empresa", persona.nombreEmpresa);
+                        proxy.command.Parameters.AddWithValue("@tipo_empresa", persona.tipoEmpresa);
+                        proxy.command.Parameters.AddWithValue("@tipo_patrocinio", persona.tipoPatrocinio);
+                        proxy.command.Parameters.AddWithValue("@identificacion", persona.identificacion);
+                        proxy.command.Parameters.AddWithValue("@nombre", persona.nombre);
+                        proxy.command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
+                        proxy.command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
+                        proxy.command.Parameters.AddWithValue("@telefono", persona.telefono);
+                        proxy.command.Parameters.AddWithValue("@correo", persona.correo);
+                        //Se añaden los valores al comando
 
                         try
                         {
-                            connection.Open();
-                            int recordsAffected = command.ExecuteNonQuery();
-                            MessageBox.Show("Se abrió la conexión");
+                            proxy.conexionSql.Open(); //Abre la conexión
+                            int recordsAffected = proxy.command.ExecuteNonQuery();
+                            MessageBox.Show("Datos de Patrocinador Agregado");   //Imprime
                         }
                         catch (SqlException ex)
                         {
-                            MessageBox.Show("Catch Patrocinadores");
+                            MessageBox.Show("Error al Agregar Patrocinadores"); //Imprime
                         }
                         finally
                         {
-                            connection.Close();
-                            MessageBox.Show("Se cerró la conexión");
+                            proxy.conexionSql.Close(); //Cierra la conexión
+                            //MessageBox.Show("Se cerró la conexión"); //Imprime
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Faltan datos Patrocinador");
+                MessageBox.Show("Faltan datos Patrocinador"); //Imprime
                 return false;
             }
             return true;
         }
 
-        public bool AgregarPadrino(Persona persona)
+        /// <summary>
+        /// Método que agrega la respectiva persona a su respectiva tabla
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <param name="proxy"></param>
+        /// <returns>true= si logró intropducir los datos
+        /// false= si no logró introducir los datos</returns>
+        public bool AgregarPadrino(Persona persona, Proxy proxy)
         {
-            if (true/*ValidarConObjeto(padrino)*/)
+            if (validacion.Validacion_Padrino(persona)) //Si no falta ningún dato, entra 
             {
-                using (SqlConnection connection = new SqlConnection(stringConexion))
+                using (proxy.conexionSql) //Llama a la instancia SqlConnection que está en la clase Proxy 
                 {
-                    using (SqlCommand command = new SqlCommand())
+                    using (proxy.command)
                     {
-                        command.Connection = connection;            // <== lacking
-                        command.CommandType = CommandType.Text;
-                        command.CommandText = "INSERT into tbl_Padrinos (identificacion, fecha, nombre, apellido1, apellido2, telefono, profesion, domicilio, correo, inscripcion, donacion) VALUES (@identificacion, @fecha, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @correo, @inscripcion, @donacion)";
-                        command.Parameters.AddWithValue("@identificacion", persona.identificacion);
-                        command.Parameters.AddWithValue("@fecha", persona.fecha);
-                        command.Parameters.AddWithValue("@nombre", persona.nombre);
-                        command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
-                        command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
-                        command.Parameters.AddWithValue("@telefono", persona.telefono);
-                        command.Parameters.AddWithValue("@profesion", persona.profesion);
-                        command.Parameters.AddWithValue("@domicilio", persona.domicilio);
-                        command.Parameters.AddWithValue("@correo", persona.correo);
-                        command.Parameters.AddWithValue("@inscripcion", persona.inscripcion);
-                        command.Parameters.AddWithValue("@donacion", persona.donacion);
-
+                        proxy.command.Connection = proxy.conexionSql;
+                        proxy.command.CommandType = CommandType.Text; //Se le asigna a Texto el tipo de comando 
+                        proxy.command.CommandText = "INSERT into tbl_Padrinos (identificacion, fecha, nombre, apellido1, apellido2, telefono, profesion, domicilio, correo, inscripcion, donacion) VALUES (@identificacion, @fecha, @nombre, @apellido1, @apellido2, @telefono, @profesion, @domicilio, @correo, @inscripcion, @donacion)";
+                        proxy.command.Parameters.AddWithValue("@identificacion", persona.identificacion);
+                        proxy.command.Parameters.AddWithValue("@fecha", persona.fecha);
+                        proxy.command.Parameters.AddWithValue("@nombre", persona.nombre);
+                        proxy.command.Parameters.AddWithValue("@apellido1", persona.primerApellido);
+                        proxy.command.Parameters.AddWithValue("@apellido2", persona.segundoApellido);
+                        proxy.command.Parameters.AddWithValue("@telefono", persona.telefono);
+                        proxy.command.Parameters.AddWithValue("@profesion", persona.profesion);
+                        proxy.command.Parameters.AddWithValue("@domicilio", persona.domicilio);
+                        proxy.command.Parameters.AddWithValue("@correo", persona.correo);
+                        proxy.command.Parameters.AddWithValue("@inscripcion", persona.inscripcion);
+                        proxy.command.Parameters.AddWithValue("@donacion", persona.donacion);
+                        //Se añaden los valores al comando
                         try
                         {
-                            connection.Open();
-                            int recordsAffected = command.ExecuteNonQuery();
-                            MessageBox.Show("Se abrió la conexión");
+                            proxy.conexionSql.Open(); //Abre la conexión
+                            int recordsAffected = proxy.command.ExecuteNonQuery();
+                            MessageBox.Show("Datos de Padrino Agregado");   //Imprime
                         }
                         catch (SqlException ex)
                         {
-                            MessageBox.Show("Catch Padrino");
+                            MessageBox.Show("Error al Agregar Padrinos"); //Imprime
                         }
                         finally
                         {
-                            MessageBox.Show("Se cerró la conexión");
-                            connection.Close();
+                            //MessageBox.Show("Se cerró la conexión"); //Imprime
+                            proxy.conexionSql.Close(); //Cierra la conexión
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No se logró guardar los datos en la base de datos");
+                MessageBox.Show("Faltan datos de Padrino"); //Imprime
                 return false;
             }
             return true;

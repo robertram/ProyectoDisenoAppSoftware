@@ -16,6 +16,7 @@ namespace Proyecto_Final.Ventanas
         public Login()
         {
             InitializeComponent();
+            txtContraseña.PasswordChar = '*';
         }
 
         /// <summary>

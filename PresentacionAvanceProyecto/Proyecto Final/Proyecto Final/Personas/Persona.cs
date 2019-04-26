@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 /// </summary>
 namespace Proyecto_Final.Personas
 {
-    public class Persona
+    public class Persona : IPersona
     {
         //obligatorios
         public string tipoDePersona { get; set; }
@@ -217,6 +217,13 @@ namespace Proyecto_Final.Personas
                 person.identificacion = this.identificacion;
                 return person;
             }
+        }
+        //Metodo para aceptar el visitor
+        public void Accept(IVisitante visitor)
+        {
+            visitor.VisitorDomicilio(this);
+            visitor.VisitorTelefono(this);
+            visitor.VisitorCorreo(this);
         }
     }
 }

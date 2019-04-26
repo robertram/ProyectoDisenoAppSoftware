@@ -38,9 +38,10 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(102, 148);
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Location = new System.Drawing.Point(115, 149);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(75, 23);
+            this.btnEntrar.Size = new System.Drawing.Size(90, 30);
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -49,24 +50,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(43, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(137, 61);
+            this.txtNombre.Location = new System.Drawing.Point(115, 61);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(122, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(137, 103);
+            this.txtContraseña.Location = new System.Drawing.Point(115, 103);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(122, 20);
             this.txtContraseña.TabIndex = 3;
             // 
             // label2

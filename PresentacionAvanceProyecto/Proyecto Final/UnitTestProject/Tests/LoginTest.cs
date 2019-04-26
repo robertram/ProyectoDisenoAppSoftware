@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Proyecto_Final.Otras;
 
-namespace UnitTestProject
+namespace UnitTestProject.Tests
 {
     /// <summary>
     /// En esta clase se hacen los Unit Tests de Login

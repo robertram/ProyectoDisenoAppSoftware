@@ -13,7 +13,6 @@ namespace Proyecto_Final.SQL
     /// </summary>
     class ConsultasSQL
     {
-        private SqlConnection conexion = new SqlConnection("Data Source=401-05;Initial Catalog=Prueba;Integrated Security=True");
         private DataSet ds;
 
         /// <summary>
@@ -21,15 +20,37 @@ namespace Proyecto_Final.SQL
         /// </summary>
         /// <param name="tabla">Nombre de la tabla en la que se desea buscar</param>
         /// <returns>Retrona los datos de la tabla</returns>
-        public DataTable MostrarDatos(string tabla)
+        public DataTable MostrarDatos(string tabla, Proxy proxy)
         {
-            conexion.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0};", tabla), conexion);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            conexion.Close();
-            return ds.Tables["tabla"];
+            proxy.conexionSql.Open();//Abre la conexión
+            if (tabla != "Niños" && tabla != "Encargados") //Si la tabla es diferente de Niños y diferente de Encargados
+            {
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0};", tabla), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            else if (tabla == "Niños") //Si tabla es igual a Niños
+            {
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_Nino;", tabla), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            else //Sino
+            {
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_EncargadoNino;", tabla), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+
         }
 
         /// <summary>
@@ -38,15 +59,39 @@ namespace Proyecto_Final.SQL
         /// <param name="tabla">Nombre de la tabla en la que se desea buscar</param>
         /// <param name="nombre">El nombre que se quiere buscar</param>
         /// <returns>Retrona los datos encontrados</returns>
-        public DataTable BuscarNombre(string tabla, string nombre)
+        public DataTable BuscarNombre(string tabla, string nombre, Proxy proxy)
         {
-            conexion.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0} where Nombre = '{1}';", tabla, nombre), conexion);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            conexion.Close();
-            return ds.Tables["tabla"];
+            if (tabla != "Niños" && tabla != "Encargados") //Si la tabla es diferente de Niños y diferente de Encargados
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0} where Nombre = '{1}';", tabla, nombre), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            if (tabla == "Niños") //Si tabla es igual a Niños
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_Nino where Nombre = '{0}';", nombre), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            else //Sino
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_EncargadoNino where Nombre = '{0}';", nombre), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+
         }
 
         /// <summary>
@@ -55,15 +100,39 @@ namespace Proyecto_Final.SQL
         /// <param name="tabla">Nombre de la tabla en la que se desea buscar</param>
         /// <param name="identificacion">La identificación que se quiere buscar</param>
         /// <returns>Retorna los datos encontrados</returns>
-        public DataTable BuscarIdentificacion(string tabla, string identificacion)
+        public DataTable BuscarIdentificacion(string tabla, string identificacion, Proxy proxy)
         {
-            conexion.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0} where Identificacion = {1};", tabla, identificacion), conexion);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            conexion.Close();
-            return ds.Tables["tabla"];
+            if (tabla != "Niños" && tabla != "Encargados") //Si la tabla es diferente de Niños y diferente de Encargados
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0} where Identificacion = '{1}';", tabla, identificacion), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            else if (tabla == "Niños")
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_Nino where Identificacion = '{0}';", identificacion), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            else //Sino
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_EncargadoNino where Identificacion = '{0}';", identificacion), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            
         }
 
         /// <summary>
@@ -73,15 +142,39 @@ namespace Proyecto_Final.SQL
         /// <param name="identificacion">La identificación que se quiere buscar</param>
         /// <param name="nombre">El nombre que se quiere buscar</param>
         /// <returns>Retorna los datos encontrados</returns>
-        public DataTable BuscarAmbos(string tabla, string identificacion, string nombre)
+        public DataTable BuscarAmbos(string tabla, string identificacion, string nombre, Proxy proxy)
         {
-            conexion.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0} where Identificacion = {1} AND Nombre = '{2}';", tabla, identificacion, nombre), conexion);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            conexion.Close();
-            return ds.Tables["tabla"];
+            if (tabla != "Niños" && tabla != "Encargados") //Si la tabla es diferente de Niños y diferente de Encargados
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_{0} where Identificacion = '{1}' AND Nombre = '{2}';", tabla, identificacion, nombre), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            else if (tabla == "Niños")
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_Nino where Identificacion = '{0}' AND Nombre = '{1}';", identificacion, nombre), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            else //Sino
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_EncargadoNino where Identificacion = '{0}' AND Nombre = '{1}';", identificacion, nombre), proxy.conexionSql);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                proxy.conexionSql.Close(); //Se cierra la conexión
+                return ds.Tables["tabla"];
+            }
+            
         }
 
         /// <summary>
@@ -90,12 +183,31 @@ namespace Proyecto_Final.SQL
         /// <param name="tabla">Nombre de la tabla de donde se quiere eliminar un elemento</param>
         /// <param name="codigo">El código del elemento que se quiere borrar</param>
         /// <returns>Se elimina: true. No elimina: false.</returns>
-        public bool Eliminar(string tabla, string codigo)
+        public bool Eliminar(string tabla, string codigo, Proxy proxy)
         {
-            conexion.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("delete from tbl_{0} where Codigo = {1};", tabla, codigo), conexion);
-            int filasafectadas = cmd.ExecuteNonQuery();
-            conexion.Close();
+            int filasafectadas = 0;
+            if (tabla != "Niños" && tabla != "Encargados")//Si la tabla es diferente de Niños y diferente de Encargados
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("delete from tbl_{0} where Codigo = {1};", tabla, codigo), proxy.conexionSql);
+                filasafectadas = cmd.ExecuteNonQuery();
+                proxy.conexionSql.Close(); //Se cierra la conexión
+            }
+            else if (tabla == "Niños")
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("delete from tbl_Nino where Codigo = {0};", codigo), proxy.conexionSql);
+                filasafectadas = cmd.ExecuteNonQuery();
+                proxy.conexionSql.Close(); //Se cierra la conexión
+            }
+            else //Sino
+            {
+                proxy.conexionSql.Open(); //Se abre la conexión
+                SqlCommand cmd = new SqlCommand(string.Format("delete from tbl_EncargadoNino where Codigo = {0};", codigo), proxy.conexionSql);
+                filasafectadas = cmd.ExecuteNonQuery();
+                proxy.conexionSql.Close(); //Se cierra la conexión
+            }
+
             if (filasafectadas > 0) return true;
             else return false;
         }

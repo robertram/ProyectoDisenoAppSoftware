@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 /// </summary>
 namespace Proyecto_Final.Personas
 {
-    class ClienteDePersonas
+    public class ClienteDePersonas
     {
 
         /// <summary>

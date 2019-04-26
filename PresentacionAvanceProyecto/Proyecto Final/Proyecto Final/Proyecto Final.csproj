@@ -48,10 +48,14 @@
   <ItemGroup>
     <Compile Include="Otras\MetodosLogin.cs" />
     <Compile Include="Personas\ClienteDePersonas.cs" />
-    <Compile Include="Personas\Facade.cs" />
+    <Compile Include="Personas\IPersona.cs" />
+    <Compile Include="Personas\IVisitante.cs" />
     <Compile Include="Personas\Persona.cs" />
+    <Compile Include="Personas\SetDatos.cs" />
     <Compile Include="SQL\AgregarPersona.cs" />
     <Compile Include="SQL\ConsultasSQL.cs" />
+    <Compile Include="SQL\Proxy.cs" />
+    <Compile Include="SQL\ValidacionDatos.cs" />
     <Compile Include="Ventanas\AlimentandoEsperanzas.cs">
       <SubType>Form</SubType>
     </Compile>

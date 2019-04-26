@@ -94,3 +94,36 @@ C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Pro
 C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
 C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
 C:\Users\ulacit\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe.config
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.pdb
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csprojResolveAssemblyReference.cache
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.AlimentandoEsperanzas.resources
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Properties.Resources.resources
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.Cache
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
+C:\Users\ulacit\Desktop\Proyecto descargado de github\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe.config
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.pdb
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csprojAssemblyReference.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.AlimentandoEsperanzas.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Properties.Resources.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftware\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe.config
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.exe
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\bin\Debug\Proyecto Final.pdb
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csprojAssemblyReference.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.AlimentandoEsperanzas.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Properties.Resources.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto_Final.Ventanas.Login.resources
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.GenerateResource.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.exe
+C:\Users\Jose David\Desktop\ProyectoDisenoAppSoftwareConVisitante\PresentacionAvanceProyecto\Proyecto Final\Proyecto Final\obj\Debug\Proyecto Final.pdb
